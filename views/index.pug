@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+ section(class="get")
+    h3 Get Data
+    a(href="/get-data") LOAD Data
+    div
+      each item, index in items
+        div(class="item")
+          div ID : #{item._name}
+          div Username : #{item.username}
