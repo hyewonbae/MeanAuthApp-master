@@ -12,13 +12,13 @@
       </ul>
       <ul class="navbar-nav navbar-right" >
           <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
-              <a class="nav-link" [routerLink]="['/adminmain']">메인</a>
+              <a class="nav-link" [routerLink]="['/adminmain']">About</a>
             </li>
           <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
-              <a class="nav-link" [routerLink]="['/dashboard']">음식점 관리</a>
+              <a class="nav-link" [routerLink]="['/dashboard']">Management</a>
             </li>
             <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
-                <a class="nav-link" [routerLink]="['/profile']">회원정보 관리</a>
+                <a class="nav-link" [routerLink]="['/profile']">Userlist</a>
               </li>
             <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']">
               <a class="nav-link"  [routerLink]="['/register']">Register</a>

@@ -9,8 +9,9 @@ const Store = require('../models/store');
 router.post('/addstore', function(req, res, next) {
   const newStore = new Store({
     name: req.body.name,
-  
-    des: req.body.des
+    des: req.body.des,
+    call:req.body.call,
+    add:req.body.add
     
   });
 

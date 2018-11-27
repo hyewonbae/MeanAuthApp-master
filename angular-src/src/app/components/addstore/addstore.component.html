@@ -1,17 +1,25 @@
-<h2 class="page-header"> AddStores </h2>
-  <form (submit)="onAddStoreSubmit()">
-    
-  
-    
-    
-      <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="ID">
-    
-    <div class="form-group">
-      
-      <input type="text" [(ngModel)]="des" name="des"  class="form-control" placeholder="des">
-    </div>
-   
-      <input type="submit" class="btn btn-primary" value="Submit">
-      
+<div class="container">
+    <br>
+    <h2 class="page-header"> AddStores </h2>
+    <form (submit)="onAddStoreSubmit()">
+  <table class="table table-bordered">
+              <tr>
+                  <th>NAME </th>
+                  <td><input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Name"></td>
+              </tr>
+              <tr>
+                  <th>MENU </th>
+                  <td><input type="text" [(ngModel)]="des" name="des"  class="form-control" placeholder="Menu"></td>
+              </tr>
+              <tr>
+                  <th>CALL </th>
+                  <td><input type="text" [(ngModel)]="call" name="call" class="form-control" placeholder="PhoneNumber"></td>
+              </tr>
+              <tr>
+                  <th>ADDRESS </th>
+                  <td><input type="text" [(ngModel)]="add" name="add" class="form-control" placeholder="Address"></td>
+              </tr>
+            </table>
+                      <input type="submit" class="btn btn-primary" value="Submit">
   </form>
-  
+  </div>

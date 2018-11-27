@@ -3,6 +3,7 @@ import { ValidateService } from '../../services/validate.service';
 import { AuthService } from '../../services/auth.service';
 import { NgFlashMessageService } from 'ng-flash-messages';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-addstore',
   templateUrl: './addstore.component.html',
@@ -11,6 +12,8 @@ import { Router } from '@angular/router';
 export class AddstoreComponent implements OnInit {
   name: String;
   des: String;
+  call: Number;
+  add: String;
   constructor(private validateService: ValidateService, 
     private flashMessage: NgFlashMessageService, 
     private authService: AuthService,
@@ -23,8 +26,8 @@ export class AddstoreComponent implements OnInit {
     const store = {
       name: this.name,
       des: this.des,
-     // email: this.email,
-     // password: this.password
+      call: this.call,
+      add: this.add
     }
 
   // Required Fields

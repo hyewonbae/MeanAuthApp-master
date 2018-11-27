@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <ng-flash-message></ng-flash-message>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <ng-flash-message></ng-flash-message>\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -111,12 +111,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/adminmain/adminmain.component */ "./src/app/components/adminmain/adminmain.component.ts");
 /* harmony import */ var _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/addstore/addstore.component */ "./src/app/components/addstore/addstore.component.ts");
 /* harmony import */ var _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/storelist/storelist.component */ "./src/app/components/storelist/storelist.component.ts");
+/* harmony import */ var _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/review/review.component */ "./src/app/components/review/review.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -144,7 +146,8 @@ var appRoutes = [
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'adminmain', component: _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'addstore', component: _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
-    { path: 'storelist', component: _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
+    { path: 'storelist', component: _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
+    { path: 'review', component: _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -161,7 +164,8 @@ var AppModule = /** @class */ (function () {
                 _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"],
                 _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"],
                 _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"],
-                _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"]
+                _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"],
+                _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -199,7 +203,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\"> AddStores </h2>\n  <form (submit)=\"onAddStoreSubmit()\">\n    \n  \n    \n    \n      <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n    \n    <div class=\"form-group\">\n      \n      <input type=\"text\" [(ngModel)]=\"des\" name=\"des\"  class=\"form-control\" placeholder=\"des\">\n    </div>\n   \n      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n      \n  </form>\n  "
+module.exports = "<div class=\"container\">\r\n    <br>\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n              <tr>\r\n                  <th>NAME </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>MENU </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"des\" name=\"des\"  class=\"form-control\" placeholder=\"Menu\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>CALL </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>ADDRESS </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n              </tr>\r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
 
 /***/ }),
 
@@ -247,6 +251,8 @@ var AddstoreComponent = /** @class */ (function () {
         var store = {
             name: this.name,
             des: this.des,
+            call: this.call,
+            add: this.add
         };
         // Required Fields
         if (!this.validateService.validateAddStore(store)) {
@@ -308,7 +314,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1><b>Welcome to Quiclick!</b></h1>\r\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n  <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h5>COMPANY INFO</h5>\r\n        <p>company:(주)quiclick</p>\r\n        <P>Email:BSJ@hansung.ac.kr</P>\r\n        <p>TEL:1234-5678</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h5>QUICLICK</h5>\r\n        <p>We offer you the best restaurant reservation service :)</p>\r\n        <p>We will always strive for better service.</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h5>App</h5>\r\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n      </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1><b>Welcome to Quiclick!</b></h1>\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n        <h5>COMPANY INFO</h5>\n        <p>company:(주)quiclick</p>\n        <P>Email:BSJ@hansung.ac.kr</P>\n        <p>TEL:1234-5678</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>QUICLICK</h5>\n        <p>We offer you the best restaurant reservation service :)</p>\n        <p>We will always strive for better service.</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>App</h5>\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n      </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -371,7 +377,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\"> Restaurants </h2>\r\n<p> This is the restaurant management page.</p>\r\n\r\n\r\n<a routerLink = \"/storelist\"> storelist </a>\r\n<a routerLink = \"/addstore\"> addstore </a>"
+module.exports = "<h2 class=\"page-header\"> Restaurants </h2>\r\n<p> This is the restaurant management page.</p>\r\n\r\n음식점:\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> <br>\r\n리뷰게시판: \r\n<a routerLink = \"/review\">review</a>"
 
 /***/ }),
 
@@ -434,7 +440,7 @@ module.exports = "h1{\r\n    color: deeppink;\r\n    font-family: 'Courier New',
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:700px; height:550px; vertical-align:middle\">\r\n  <h1><b>Welcome to Quiclick!</b></h1>\r\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n  <div>\r\n    <br>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> &nbsp; \r\n    <a class=\"btn btn-secondary\" [routerLink]=\"['/login']\">AdminLogin</a>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:700px; height:550px; vertical-align:middle\">\n  <h1><b>Welcome to Quiclick!</b></h1>\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n  <div>\n    <br>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> &nbsp; \n    <a class=\"btn btn-secondary\" [routerLink]=\"['/login']\">AdminLogin</a>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -497,7 +503,7 @@ module.exports = "h2{\r\n    color: deeppink;\r\n    font-family: 'Courier New',
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b>Login</b></h2>\r\n<form (submit)=\"onLoginSubmit()\">\r\n  <div class=\"form-group\">\r\n   \r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\r\n</form>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b>Login</b></h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n   \n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>\n</div>"
 
 /***/ }),
 
@@ -599,7 +605,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-danger\">\r\n    <a class=\"navbar-brand\" href=\"#\">QUICLICK</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">메인</a>\r\n            </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">음식점 관리</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">회원정보 관리</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-danger\">\r\n    <a class=\"navbar-brand\" href=\"#\">QUICLICK</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">About</a>\r\n            </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Management</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Userlist</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -761,7 +767,7 @@ module.exports = "h2{\r\n    color: deeppink;\r\n    font-family: 'Courier New',
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b> Register </b></h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n    \r\n  <div class=\"form-group\" >\r\n  \r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\r\n  </div>\r\n  <div class=\"form-group\"> -->\r\n\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n  </div>\r\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n    \r\n</form>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\n  </div>\n  <div class=\"form-group\"> -->\n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n    \n</form>\n</div>"
 
 /***/ }),
 
@@ -859,6 +865,69 @@ var RegisterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/review/review.component.css":
+/*!********************************************************!*\
+  !*** ./src/app/components/review/review.component.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/review/review.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/review/review.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<table class=\"table table-striped\">\n    <colgroup>\n      <col class=\"num\"/>\n      <col class=\"title\"/>\n      <col class=\"writer\"/>\n      <col class=\"date\"/>\n    </colgroup>\n    <thead>\n      <tr>\n        <th style=\"text-align: center\" width=\"10%\">번호</th>\n        <th style=\"text-align: center\" width=\"60%\">제목</th>\n        <th style=\"text-align: center\" width=\"20%\">작성자</th>\n        <th style=\"text-align: center\" width=\"10%\">날짜</th>\n      \n      </tr>\n    </thead>\n    </table>\n    <a class=\"btn btn-secondary\">edit</a>&nbsp;\n    <a class=\"btn btn-secondary\">delete</a>\n      "
+
+/***/ }),
+
+/***/ "./src/app/components/review/review.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/review/review.component.ts ***!
+  \*******************************************************/
+/*! exports provided: ReviewComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewComponent", function() { return ReviewComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ReviewComponent = /** @class */ (function () {
+    function ReviewComponent() {
+    }
+    ReviewComponent.prototype.ngOnInit = function () {
+    };
+    ReviewComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-review',
+            template: __webpack_require__(/*! ./review.component.html */ "./src/app/components/review/review.component.html"),
+            styles: [__webpack_require__(/*! ./review.component.css */ "./src/app/components/review/review.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ReviewComponent);
+    return ReviewComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/components/storelist/storelist.component.css":
 /*!**************************************************************!*\
   !*** ./src/app/components/storelist/storelist.component.css ***!
@@ -877,7 +946,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<ul class=\"stores\">\n  <li *ngFor=\"let store of stores\">\n    <span class=\"badge\">{{store.name}}</span> {{store.des}}\n  </li>\n</ul>"
+module.exports = "\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores\">\r\n    <span class=\"badge\">{{store.name}}</span> {{store.des}}\r\n  </li>\r\n</ul>"
 
 /***/ }),
 
@@ -1176,7 +1245,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\SY\DatabaseExample\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\배혜원\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })
