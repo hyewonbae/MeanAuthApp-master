@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <ng-flash-message></ng-flash-message>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <ng-flash-message></ng-flash-message>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -109,6 +109,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_14__);
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
 /* harmony import */ var _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/adminmain/adminmain.component */ "./src/app/components/adminmain/adminmain.component.ts");
+/* harmony import */ var _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/addstore/addstore.component */ "./src/app/components/addstore/addstore.component.ts");
+/* harmony import */ var _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/storelist/storelist.component */ "./src/app/components/storelist/storelist.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -132,13 +134,17 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var appRoutes = [
     { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"] },
     { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"] },
     { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"] },
     { path: 'dashboard', component: _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'profile', component: _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
-    { path: 'adminmain', component: _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
+    { path: 'adminmain', component: _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
+    { path: 'addstore', component: _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
+    { path: 'storelist', component: _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -153,7 +159,9 @@ var AppModule = /** @class */ (function () {
                 _components_home_home_component__WEBPACK_IMPORTED_MODULE_9__["HomeComponent"],
                 _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"],
                 _components_profile_profile_component__WEBPACK_IMPORTED_MODULE_11__["ProfileComponent"],
-                _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"]
+                _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"],
+                _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"],
+                _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -167,6 +175,115 @@ var AppModule = /** @class */ (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/addstore/addstore.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/addstore/addstore.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/addstore/addstore.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/addstore/addstore.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\"> AddStores </h2>\n  <form (submit)=\"onAddStoreSubmit()\">\n    \n  \n    \n    \n      <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n    \n    <div class=\"form-group\">\n      \n      <input type=\"text\" [(ngModel)]=\"des\" name=\"des\"  class=\"form-control\" placeholder=\"des\">\n    </div>\n   \n      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n      \n  </form>\n  "
+
+/***/ }),
+
+/***/ "./src/app/components/addstore/addstore.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/addstore/addstore.component.ts ***!
+  \***********************************************************/
+/*! exports provided: AddstoreComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddstoreComponent", function() { return AddstoreComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_validate_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/validate.service */ "./src/app/services/validate.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ng-flash-messages */ "./node_modules/ng-flash-messages/ng-flash-messages.umd.js");
+/* harmony import */ var ng_flash_messages__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ng_flash_messages__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AddstoreComponent = /** @class */ (function () {
+    function AddstoreComponent(validateService, flashMessage, authService, router) {
+        this.validateService = validateService;
+        this.flashMessage = flashMessage;
+        this.authService = authService;
+        this.router = router;
+    }
+    AddstoreComponent.prototype.ngOnInit = function () {
+    };
+    AddstoreComponent.prototype.onAddStoreSubmit = function () {
+        var _this = this;
+        var store = {
+            name: this.name,
+            des: this.des,
+        };
+        // Required Fields
+        if (!this.validateService.validateAddStore(store)) {
+            this.flashMessage.showFlashMessage({ messages: ['Please fill in all fields'], type: 'danger', timeout: 2000 });
+            return false;
+        }
+        // Register User
+        this.authService.addStore(store).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.showFlashMessage({
+                    messages: ['You are now added and check in your app! '],
+                    type: 'success',
+                    timeout: 5000
+                });
+                _this.router.navigate(['/dashboard']);
+            }
+            else {
+                _this.flashMessage.showFlashMessage({ messages: ['Something went wrong'],
+                    type: 'danger',
+                    timeout: 3000
+                });
+                _this.router.navigate(['/addstore']);
+            }
+        });
+    };
+    AddstoreComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-addstore',
+            template: __webpack_require__(/*! ./addstore.component.html */ "./src/app/components/addstore/addstore.component.html"),
+            styles: [__webpack_require__(/*! ./addstore.component.css */ "./src/app/components/addstore/addstore.component.css")]
+        }),
+        __metadata("design:paramtypes", [_services_validate_service__WEBPACK_IMPORTED_MODULE_1__["ValidateService"],
+            ng_flash_messages__WEBPACK_IMPORTED_MODULE_3__["NgFlashMessageService"],
+            _services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    ], AddstoreComponent);
+    return AddstoreComponent;
 }());
 
 
@@ -191,7 +308,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1><b>Welcome to Quiclick!</b></h1>\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n        <h5>COMPANY INFO</h5>\n        <p>company:(주)quiclick</p>\n        <P>Email:BSJ@hansung.ac.kr</P>\n        <p>TEL:1234-5678</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>QUICLICK</h5>\n        <p>We offer you the best restaurant reservation service :)</p>\n        <p>We will always strive for better service.</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>App</h5>\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n      </div>\n    </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1><b>Welcome to Quiclick!</b></h1>\r\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n  <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h5>COMPANY INFO</h5>\r\n        <p>company:(주)quiclick</p>\r\n        <P>Email:BSJ@hansung.ac.kr</P>\r\n        <p>TEL:1234-5678</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h5>QUICLICK</h5>\r\n        <p>We offer you the best restaurant reservation service :)</p>\r\n        <p>We will always strive for better service.</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h5>App</h5>\r\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n      </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -254,7 +371,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\"> Restaurants </h2>\n<p> This is the restaurant management page.</p>"
+module.exports = "<h2 class=\"page-header\"> Restaurants </h2>\r\n<p> This is the restaurant management page.</p>\r\n\r\n\r\n<a routerLink = \"/storelist\"> storelist </a>\r\n<a routerLink = \"/addstore\"> addstore </a>"
 
 /***/ }),
 
@@ -317,7 +434,7 @@ module.exports = "h1{\r\n    color: deeppink;\r\n    font-family: 'Courier New',
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:700px; height:550px; vertical-align:middle\">\n  <h1><b>Welcome to Quiclick!</b></h1>\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n  <div>\n    <br>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> &nbsp; \n    <a class=\"btn btn-secondary\" [routerLink]=\"['/login']\">AdminLogin</a>\n  </div>\n</div>\n"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:700px; height:550px; vertical-align:middle\">\r\n  <h1><b>Welcome to Quiclick!</b></h1>\r\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n  <div>\r\n    <br>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> &nbsp; \r\n    <a class=\"btn btn-secondary\" [routerLink]=\"['/login']\">AdminLogin</a>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -380,7 +497,7 @@ module.exports = "h2{\r\n    color: deeppink;\r\n    font-family: 'Courier New',
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b>Login</b></h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n   \n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b>Login</b></h2>\r\n<form (submit)=\"onLoginSubmit()\">\r\n  <div class=\"form-group\">\r\n   \r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Login\">\r\n</form>\r\n</div>"
 
 /***/ }),
 
@@ -482,7 +599,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-danger\">\n    <a class=\"navbar-brand\" href=\"#\">QUICLICK</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n      </button>\n\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\n      <ul class=\"navbar-nav mr-auto\">\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\n        </li> -->\n      </ul>\n      <ul class=\"navbar-nav navbar-right\" >\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">메인</a>\n            </li>\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">음식점 관리</a>\n            </li>\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">회원정보 관리</a>\n              </li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\n            </li>\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\n            </li>\n            <li class=\"nav-item\">\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\n            </li>\n      </ul>\n    </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-danger\">\r\n    <a class=\"navbar-brand\" href=\"#\">QUICLICK</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">메인</a>\r\n            </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">음식점 관리</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">회원정보 관리</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -567,7 +684,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\n <!--<h2 class=\"page-header\"> {{user.name}} </h2> -->\n <h2>UserList</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>  \n    <li class=\"list-group-item\">Email: {{user.email}}</li>  \n  </ul>\n  <ul class=\"list-group\">\n  \n  </ul>\n</div>\n"
+module.exports = "<div *ngIf=\"user\">\r\n <!--<h2 class=\"page-header\"> {{user.name}} </h2> -->\r\n <h2>UserList</h2>\r\n  <ul class=\"list-group\">\r\n    <li class=\"list-group-item\">ID: {{user.name}}</li>  \r\n    <li class=\"list-group-item\">Username: {{user.username}}</li> \r\n  </ul>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -644,7 +761,7 @@ module.exports = "h2{\r\n    color: deeppink;\r\n    font-family: 'Courier New',
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\n  </div>\n  <div class=\"form-group\"> -->\n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n    \n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b> Register </b></h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n    \r\n  <div class=\"form-group\" >\r\n  \r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\r\n  </div>\r\n  <div class=\"form-group\"> -->\r\n\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n  </div>\r\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n    \r\n</form>\r\n</div>"
 
 /***/ }),
 
@@ -742,6 +859,69 @@ var RegisterComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/storelist/storelist.component.css":
+/*!**************************************************************!*\
+  !*** ./src/app/components/storelist/storelist.component.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/storelist/storelist.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/components/storelist/storelist.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<ul class=\"stores\">\n  <li *ngFor=\"let store of stores\">\n    <span class=\"badge\">{{store.name}}</span> {{store.des}}\n  </li>\n</ul>"
+
+/***/ }),
+
+/***/ "./src/app/components/storelist/storelist.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/components/storelist/storelist.component.ts ***!
+  \*************************************************************/
+/*! exports provided: StorelistComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StorelistComponent", function() { return StorelistComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var StorelistComponent = /** @class */ (function () {
+    function StorelistComponent() {
+    }
+    StorelistComponent.prototype.ngOnInit = function () {
+    };
+    StorelistComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-storelist',
+            template: __webpack_require__(/*! ./storelist.component.html */ "./src/app/components/storelist/storelist.component.html"),
+            styles: [__webpack_require__(/*! ./storelist.component.css */ "./src/app/components/storelist/storelist.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], StorelistComponent);
+    return StorelistComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/guards/auth.guard.ts":
 /*!**************************************!*\
   !*** ./src/app/guards/auth.guard.ts ***!
@@ -831,6 +1011,12 @@ var AuthService = /** @class */ (function () {
         return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
+    AuthService.prototype.addStore = function (store) {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('http://localhost:3000/stores/addstore', store, { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
+    };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
@@ -902,6 +1088,14 @@ var ValidateService = /** @class */ (function () {
     }
     ValidateService.prototype.validateRegister = function (user) {
         if (user.name == undefined || user.username == undefined || user.password == undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService.prototype.validateAddStore = function (store) {
+        if (store.name == undefined) {
             return false;
         }
         else {
@@ -982,7 +1176,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\배혜원\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\SY\DatabaseExample\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

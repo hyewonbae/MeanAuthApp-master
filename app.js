@@ -10,19 +10,25 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
+
 mongoose.Promise = require('bluebird');
 mongoose.connect(config.database, { useNewUrlParser: true });
+
 mongoose.connection.on('connected', () => {
   console.log('Connected to database ' + config.database);
+ 
 });
 mongoose.connection.on('error', (err) => {
   console.log('Database error ' + err);
 });
 
+
+
 //========================================>
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var storesRouter = require('./routes/stores');
 
 var app = express();
 
@@ -50,6 +56,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/stores', storesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

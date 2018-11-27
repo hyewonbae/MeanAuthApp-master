@@ -17,6 +17,8 @@ import { AuthService } from './services/auth.service';
 import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminmainComponent } from './components/adminmain/adminmain.component';
+import { AddstoreComponent } from './components/addstore/addstore.component';
+import { StorelistComponent } from './components/storelist/storelist.component';
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate:[AuthGuard]},
   {path:'profile', component: ProfileComponent, canActivate:[AuthGuard]},
-  {path:'adminmain', component: AdminmainComponent, canActivate:[AuthGuard]}
+  {path:'adminmain', component: AdminmainComponent, canActivate:[AuthGuard]},
+  {path:'addstore', component: AddstoreComponent, canActivate:[AuthGuard]},
+  {path:'storelist', component: StorelistComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({
@@ -36,7 +40,9 @@ const appRoutes: Routes = [
     HomeComponent,
     DashboardComponent,
     ProfileComponent,
-    AdminmainComponent
+    AdminmainComponent,
+    AddstoreComponent,
+    StorelistComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 export class AuthService {
   authToken: any;
   user: any;
+  store: any;
 
   constructor(private http:Http) { }
 
@@ -16,6 +17,12 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/users/register', user, {headers: headers})
+      .pipe(map(res => res.json()));
+  }
+  addStore(store) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/stores/addstore', store, {headers: headers})
       .pipe(map(res => res.json()));
   }
 
