@@ -18,9 +18,11 @@ const StoreSchema = mongoose.Schema({
   },
   call: {
     type: Number,
+    required: true
   },
   add: {
     type: String,
+    required: true
   },
 });
 
@@ -34,17 +36,17 @@ module.exports.getStoreByname = function(name, callback){
   const query = {name: name}
   Store.findOne(query, callback);
 }
-module.exports.getStoreByname = function(des, callback){
-  const query = {des: des}
-  Store.findOne(query, callback);
+module.exports.getStoreBydes= function(des, callback){
+  const query1 = {des: des}
+  Store.findOne(query1, callback);
 }
 module.exports.getStoreBycall = function(call, callback){
-  const query = {call: call}
-  Store.findOne(query, callback);
+  const query2 = {call: call}
+  Store.findOne(query2, callback);
 }
 module.exports.getStoreByadd = function(add, callback){
-  const query = {add: add}
-  Store.findOne(query, callback);
+  const query3 = {add: add}
+  Store.findOne(query3, callback);
 }
 module.exports.addStore = function(newStore, callback){
   
