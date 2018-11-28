@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onRegisterSubmit() {
-    const user = {
+    const newu = {
       name: this.name,
       username: this.username,
      // email: this.email,
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     }
 
   // Required Fields
-    if(!this.validateService.validateRegister(user)) {
+    if(!this.validateService.validateRegister(newu)) {
       this.flashMessage.showFlashMessage({messages: ['Please fill in all fields'], type: 'danger', timeout:2000});
       return false;
     }
@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
     // }
 
     // Register User
-    this.authService.registerUser(user).subscribe(data => {
+    this.authService.registerNewu(newu).subscribe(data => {
       if(data.success) {
         this.flashMessage.showFlashMessage({
           messages: ['환영해~~앱에서 확인해보쇼!'], 

@@ -8,15 +8,16 @@ import { tokenNotExpired } from 'angular2-jwt';
 })
 export class AuthService {
   authToken: any;
-  user: any;
+  newu: any;
   store: any;
+  user: any;
 
   constructor(private http:Http) { }
 
-  registerUser(user) {
+  registerNewu(newu) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/register', user, {headers: headers})
+    return this.http.post('http://localhost:3000/newus/register', newu, {headers: headers})
       .pipe(map(res => res.json()));
   }
   addStore(store) {
@@ -38,8 +39,15 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/users/profile', {headers: headers})
+    return this.http.get('http://localhost:3000/newus/profile', {headers: headers})
       .pipe(map(res => res.json()));
+  }
+
+  storeNewuData(token, newu) {
+    localStorage.setItem('id_token', token);
+    localStorage.setItem('newu', JSON.stringify(newu));
+    this.authToken = token;
+    this.newu = newu;
   }
 
   storeUserData(token, user) {
@@ -48,7 +56,6 @@ export class AuthService {
     this.authToken = token;
     this.user = user;
   }
-
   loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
