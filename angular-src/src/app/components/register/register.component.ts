@@ -49,14 +49,14 @@ export class RegisterComponent implements OnInit {
     this.authService.registerUser(user).subscribe(data => {
       if(data.success) {
         this.flashMessage.showFlashMessage({
-          messages: ['You are now registered and check in your app! '], 
+          messages: ['환영해~~앱에서 확인해보쇼!'], 
           type: 'success', 
           timeout:5000
         });
         this.router.navigate(['/']);
       } else {
         this.flashMessage.showFlashMessage(
-          {messages: ['Something went wrong'], 
+          {messages: ['뭔가 잘못됐어 ㅠㅠ'], 
           type: 'danger', 
           timeout:3000
         });

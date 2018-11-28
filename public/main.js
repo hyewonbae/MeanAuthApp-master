@@ -377,7 +377,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\"> Restaurants </h2>\r\n<p> This is the restaurant management page.</p>\r\n\r\n음식점:\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> <br>\r\n리뷰게시판: \r\n<a routerLink = \"/review\">review</a>"
+module.exports = "<div class=\"jumbotron text-center\" >\r\n\r\n음식점:\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> <br>\r\n리뷰게시판: \r\n<a routerLink = \"/review\">review</a>\r\n</div>"
 
 /***/ }),
 
@@ -554,7 +554,7 @@ var LoginComponent = /** @class */ (function () {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
                 _this.flashMessage.showFlashMessage({
-                    messages: [data.msg],
+                    messages: ['관리자 맞구나~~?'],
                     type: 'success',
                     timeout: 3000
                 });
@@ -562,7 +562,7 @@ var LoginComponent = /** @class */ (function () {
             }
             else {
                 _this.flashMessage.showFlashMessage({
-                    messages: [data.msg],
+                    messages: ['너 관리자 아니잖아ㅡㅡ'],
                     type: 'danger',
                     timeout: 3000
                 });
@@ -605,7 +605,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-danger\">\r\n    <a class=\"navbar-brand\" href=\"#\">QUICLICK</a>\r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">About</a>\r\n            </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Management</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Userlist</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK</a>\r\n            </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">About</a>\r\n            </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Management</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Userlist</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -648,7 +648,7 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.prototype.onLogoutClick = function () {
         this.authService.logout();
         this.flashMessage.showFlashMessage({
-            messages: ['You are logged out'],
+            messages: ['가지마아ㅏ아앙ㅇ~~~~~'],
             type: 'success',
             timeout: 3000
         });
@@ -832,14 +832,14 @@ var RegisterComponent = /** @class */ (function () {
         this.authService.registerUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.showFlashMessage({
-                    messages: ['You are now registered and check in your app! '],
+                    messages: ['환영해~~앱에서 확인해보쇼!'],
                     type: 'success',
                     timeout: 5000
                 });
                 _this.router.navigate(['/']);
             }
             else {
-                _this.flashMessage.showFlashMessage({ messages: ['Something went wrong'],
+                _this.flashMessage.showFlashMessage({ messages: ['뭔가 잘못됐어 ㅠㅠ'],
                     type: 'danger',
                     timeout: 3000
                 });
