@@ -17,20 +17,20 @@ export class AuthService {
   registerNewu(newu) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/newus/register', newu, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/newus/register', newu, {headers: headers})
       .pipe(map(res => res.json()));
   }
   addStore(store) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/stores/addstore', store, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/stores/addstore', store, {headers: headers})
       .pipe(map(res => res.json()));
   }
 
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/users/authenticate', user, {headers: headers})
       .pipe(map(res => res.json()));
   }
 
@@ -39,7 +39,7 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/newus/profile', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/newus/profile', {headers: headers})
       .pipe(map(res => res.json()));
   }
 
