@@ -961,6 +961,8 @@ module.exports = "\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of store
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StorelistComponent", function() { return StorelistComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -971,10 +973,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var StorelistComponent = /** @class */ (function () {
-    function StorelistComponent() {
+    function StorelistComponent(authService, router) {
+        this.authService = authService;
+        this.router = router;
     }
     StorelistComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.getStore().subscribe(function (data) {
+            _this.stores = data.store;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
     };
     StorelistComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -982,7 +995,8 @@ var StorelistComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./storelist.component.html */ "./src/app/components/storelist/storelist.component.html"),
             styles: [__webpack_require__(/*! ./storelist.component.css */ "./src/app/components/storelist/storelist.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], StorelistComponent);
     return StorelistComponent;
 }());
@@ -1074,6 +1088,13 @@ var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
     }
+    AuthService.prototype.getStore = function () {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.get('http://13.209.244.98:3000/stores/storelist', { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
+    };
     AuthService.prototype.registerNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');

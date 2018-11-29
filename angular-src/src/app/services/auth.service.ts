@@ -14,6 +14,13 @@ export class AuthService {
 
   constructor(private http:Http) { }
 
+  getStore() {   /////////////////////요부분
+    let headers = new Headers();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://13.209.244.98:3000/stores/storelist', {headers: headers})
+      .pipe(map(res => res.json()));
+  }
   registerNewu(newu) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');

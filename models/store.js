@@ -27,7 +27,9 @@ const StoreSchema = mongoose.Schema({
 });
 
 const Store = module.exports = mongoose.model('Store', StoreSchema);
-
+module.exports.getStoreAll = function(id, callback){//////////////////////////요부분 전체
+  Store.find(id, callback);
+}
 module.exports.getStoreById = function(id, callback){
     Store.findById(id, callback);
 }

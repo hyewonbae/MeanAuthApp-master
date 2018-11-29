@@ -58,6 +58,15 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
   res.json({user: req.user});
 });
 
+router.get('/storelist', (req, res, next) => { //////////////////////////////요부분
+
+  Store.getStoreAll ((err, store) => { 
+
+    res.json({store: store});
+
+  });
+
+});
 //==================================================>
 
 module.exports = router;
