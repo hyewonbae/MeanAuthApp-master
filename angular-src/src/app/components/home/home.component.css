@@ -1,5 +1,9 @@
 h1{
-    color: rgb(245, 140, 156);
+    color:rgb(115, 133, 153);
     font-family: 'Courier New', Courier, monospace;
     font-size: 250%;
+}
+div{background:#ede9f5;}
+a{
+    color:pink
 }

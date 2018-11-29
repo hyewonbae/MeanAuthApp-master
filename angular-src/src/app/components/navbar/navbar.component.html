@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-default">
     
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler " type="button"data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon caret"></span>
       </button>
 
     <div class="collapse navbar-collapse" id="navbarsExample04">
@@ -16,8 +16,8 @@
       <ul class="navbar-nav navbar-right" >
           <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
               <a class="nav-link" [routerLink]="['/adminmain']">About</a>
-            </li>
-          <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
+          </li>
+          <li *ngIf="authService.loggedIn()" class="nav-item"[routerLinkActive]="['active']" >
               <a class="nav-link" [routerLink]="['/dashboard']">Management</a>
             </li>
             <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
