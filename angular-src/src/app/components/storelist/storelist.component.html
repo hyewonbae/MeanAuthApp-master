@@ -1,6 +1,7 @@
 <p>Storelist</p>
 <ul class="stores">
-  <li *ngFor="let store of stores; let i=index"> 
-      {{i}}:{{store.name}}{{store.des}}{{store.call}}{{store.add}}
+  <li *ngFor="let store of stores; let i =index"> 
+      <span class="badge">{{i+1}}</span>{{store.name}}&nbsp;&nbsp;&nbsp;
+      {{store.des}}&nbsp;&nbsp;{{store.call}}&nbsp;&nbsp;{{store.add}}
 </li> 
 </ul>

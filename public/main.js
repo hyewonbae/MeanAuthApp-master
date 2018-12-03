@@ -679,7 +679,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".users .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .users {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 25em;\r\n  }\r\n  .users li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(236, 211, 235);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .users li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .users li:hover {\r\n    color: rgb(236, 211, 235);\r\n    background-color: #DDD;\r\n    left: .1em;\r\n  }\r\n  .users .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }"
 
 /***/ }),
 
@@ -690,7 +690,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"user\">\r\n <!--<h2 class=\"page-header\"> {{user.name}} </h2> -->\r\n <h2>UserList</h2>\r\n  <ul class=\"list-group\">\r\n    <li class=\"list-group-item\">ID: {{user.name}}</li>  \r\n    <li class=\"list-group-item\">Username: {{user.username}}</li> \r\n  </ul>\r\n</div>\r\n"
+module.exports = "<p>Userlist</p>\r\n<ul class=\"users\">\r\n  <li *ngFor=\"let user of users;\" style=\"text-align:center\"> \r\n    Id:&nbsp;{{user.name}} &nbsp;Username:&nbsp;{{user.username}}\r\n</li> \r\n</ul>"
 
 /***/ }),
 
@@ -726,8 +726,9 @@ var ProfileComponent = /** @class */ (function () {
     }
     ProfileComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.authService.getProfile().subscribe(function (profile) {
-            _this.user = profile.user;
+        this.authService.getProfile().subscribe(function (data) {
+            _this.users = data.user;
+            console.log("성공");
         }, function (err) {
             console.log(err);
             return false;
@@ -935,7 +936,7 @@ var ReviewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".stores .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .stores {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 25em;\r\n  }\r\n  .stores li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(237, 222, 243);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .stores li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .stores li:hover {\r\n    color: rgb(255, 255, 255);\r\n    background-color: rgb(199, 230, 207);\r\n    left: .1em;\r\n  }\r\n  .stores .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }\r\n  "
 
 /***/ }),
 
@@ -946,7 +947,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Storelist</p>\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores; let i=index\"> \r\n      {{i}}:{{store.name}}{{store.des}}{{store.call}}{{store.add}}\r\n</li> \r\n</ul>"
+module.exports = "<p>Storelist</p>\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores; let i =index\"> \r\n      <span class=\"badge\">{{i+1}}</span>{{store.name}}&nbsp;&nbsp;&nbsp;\r\n      {{store.des}}&nbsp;&nbsp;{{store.call}}&nbsp;&nbsp;{{store.add}}\r\n</li> \r\n</ul>"
 
 /***/ }),
 
@@ -1116,10 +1117,9 @@ var AuthService = /** @class */ (function () {
     };
     AuthService.prototype.getProfile = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
-        this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/newus/profile', { headers: headers })
+        return this.http.get('http://localhost:3000/newus/userlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {

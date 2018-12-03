@@ -24,11 +24,16 @@ router.post('/register', function(req, res, next) {
 });
 
 //=======================================>
+router.get('/userlist', (req, res, next) => { 
 
-router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
-  res.json({newu: req.newu});
+  Newu.getUserAll ((err, user) => { 
+    if(err) {throw err;}
+res.json({user:user});
+   
+
+  });
+ 
 });
-
 //==================================================>
 
 module.exports = router;
