@@ -20,6 +20,7 @@ export class StorelistComponent implements OnInit {
 
     this.authService.getStore().subscribe(data => {
       this.stores = data.store;
+      console.log("성공");
     },
     err=>{
       console.log(err);

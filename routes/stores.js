@@ -61,11 +61,12 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
 router.get('/storelist', (req, res, next) => { //////////////////////////////요부분
 
   Store.getStoreAll ((err, store) => { 
-
-    res.json({store: store});
+    if(err) {throw err;}
+res.json({store:store});
+   
 
   });
-
+ 
 });
 //==================================================>
 

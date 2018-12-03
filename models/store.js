@@ -28,7 +28,16 @@ const StoreSchema = mongoose.Schema({
 
 const Store = module.exports = mongoose.model('Store', StoreSchema);
 module.exports.getStoreAll = function(id, callback){//////////////////////////요부분 전체
-  Store.find(id, callback);
+  Store.find({},function(err,results){
+    if(err) {throw err;}
+    if (results) {
+      store = results[0]._doc.name;
+			console.log('맛집정보:', 
+          results[0]._doc.name, results[1]._doc.name,results[0]._doc.call,results[0]._doc.add);
+      Store.find(id,results);
+		}
+  })
+ 
 }
 module.exports.getStoreById = function(id, callback){
     Store.findById(id, callback);

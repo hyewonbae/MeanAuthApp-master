@@ -872,7 +872,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\r\n    border-collapse: collapse;\r\n    width: 100%;\r\n}\r\n\r\nth, td {\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\n/* tr:nth-child(even){background-color: #f2f2f2} */\r\n\r\nth {\r\n    background-color: rgb(186, 236, 187);\r\n    color: rgb(97, 97, 97);\r\n}"
+module.exports = "table {\r\n    border-collapse: collapse;\r\n    width: 100%;\r\n}\r\n\r\nth, td {\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\n/* tr:nth-child(even){background-color: #f2f2f2} */\r\n\r\nth {\r\n    background-color: rgb(217, 250, 219);\r\n    color: rgb(97, 97, 97);\r\n}"
 
 /***/ }),
 
@@ -946,7 +946,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores\">\r\n    <span class=\"badge\">{{store.name}}</span> {{store.des}}\r\n  </li>\r\n</ul>"
+module.exports = "<p>Storelist</p>\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores; let i=index\"> \r\n      {{i}}:{{store.name}}{{store.des}}{{store.call}}{{store.add}}\r\n</li> \r\n</ul>"
 
 /***/ }),
 
@@ -984,6 +984,7 @@ var StorelistComponent = /** @class */ (function () {
         var _this = this;
         this.authService.getStore().subscribe(function (data) {
             _this.stores = data.store;
+            console.log("성공");
         }, function (err) {
             console.log(err);
             return false;
@@ -1092,7 +1093,7 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/stores/storelist', { headers: headers })
+        return this.http.get('http://localhost:3000/stores/storelist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.registerNewu = function (newu) {
