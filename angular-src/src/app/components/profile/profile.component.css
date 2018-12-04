@@ -33,7 +33,7 @@
     color: white;
   }
   .users li:hover {
-    color: rgb(236, 211, 235);
+    color: black;
     background-color: #DDD;
     left: .1em;
   }

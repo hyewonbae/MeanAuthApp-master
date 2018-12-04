@@ -679,7 +679,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".users .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .users {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 25em;\r\n  }\r\n  .users li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(236, 211, 235);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .users li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .users li:hover {\r\n    color: rgb(236, 211, 235);\r\n    background-color: #DDD;\r\n    left: .1em;\r\n  }\r\n  .users .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }"
+module.exports = ".users .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .users {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 25em;\r\n  }\r\n  .users li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(236, 211, 235);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .users li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .users li:hover {\r\n    color: black;\r\n    background-color: #DDD;\r\n    left: .1em;\r\n  }\r\n  .users .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }"
 
 /***/ }),
 
@@ -1094,7 +1094,7 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/stores/storelist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/stores/storelist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.registerNewu = function (newu) {
@@ -1119,7 +1119,7 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/newus/userlist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/newus/userlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {
