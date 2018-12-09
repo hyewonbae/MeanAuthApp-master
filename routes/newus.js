@@ -35,5 +35,12 @@ res.json({user:user});
  
 });
 //==================================================>
+router.get('/delete', (req, res, next) => { 
 
+  Newu.deleteUser((err, user) => { 
+    if(err) {throw err;}
+    res.json({user:user});
+
+  });
+});
 module.exports = router;

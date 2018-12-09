@@ -1,6 +1,9 @@
-<p>Userlist</p>
-<ul class="users">
-  <li *ngFor="let user of users;" style="text-align:center"> 
-    Id:&nbsp;{{user.name}} &nbsp;Username:&nbsp;{{user.username}}
-</li> 
-</ul>
+<form (submit)="deleteusers()">
+  <p>Userlist</p>
+  <ul class="users">
+    <li *ngFor="let user of users; let i=index" style="text-align:center"> 
+      {{i+1}}:&nbsp;&nbsp;Id:&nbsp;{{user.name}} &nbsp;Username:&nbsp;{{user.username}}
+       &nbsp;<input type="submit"  value="X"> 
+  </li> 
+  </ul>
+  </form>

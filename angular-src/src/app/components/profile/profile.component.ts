@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { enableProdMode } from '@angular/core';
 
+enableProdMode();
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -25,5 +27,15 @@ export class ProfileComponent implements OnInit {
       return false;
     })
   }
-
+  deleteusers(){
+    this.authService.delete().subscribe(data =>
+      {
+         this.users = data.user; 
+         console.log("성공");
+        },
+       err => { 
+         console.log(err); 
+        return false;
+       });
+    }
 }

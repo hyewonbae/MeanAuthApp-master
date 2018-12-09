@@ -13,7 +13,13 @@ export class AuthService {
   user: any;
 
   constructor(private http:Http) { }
-
+  delete(){
+    let headers = new Headers();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/newus/delete', {headers: headers})
+      .pipe(map(res => res.json()));
+  }
   getStore() {   /////////////////////요부분
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
