@@ -14,6 +14,7 @@ export class AddstoreComponent implements OnInit {
   des: String;
   call: Number;
   add: String;
+  count:Number;
   constructor(private validateService: ValidateService, 
     private flashMessage: NgFlashMessageService, 
     private authService: AuthService,

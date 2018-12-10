@@ -3,5 +3,6 @@
   <li *ngFor="let store of stores; let i =index"> 
       <span class="badge">{{i+1}}</span>{{store.name}}&nbsp;&nbsp;&nbsp;
       {{store.des}}&nbsp;&nbsp;{{store.call}}&nbsp;&nbsp;{{store.add}}
+      &nbsp;&nbsp;예약대기자수:&nbsp;{{store.count}}
 </li> 
 </ul>

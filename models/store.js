@@ -24,6 +24,9 @@ const StoreSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  count: {
+    type: Number
+  }
 });
 
 const Store = module.exports = mongoose.model('Store', StoreSchema);
