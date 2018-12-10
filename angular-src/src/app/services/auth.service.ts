@@ -18,7 +18,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://127.0.0.1:3000/newus/delete', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/newus/delete', {headers: headers})
       .pipe(map(res => res.json()));
   }
   getStore() {   /////////////////////요부분
@@ -32,7 +32,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://127.0.0.1:3000/reviews/reviewlist', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', {headers: headers})
       .pipe(map(res => res.json()));
   }
 
@@ -45,13 +45,13 @@ export class AuthService {
   addStore(store) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/stores/addstore', store, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/stores/addstore', store, {headers: headers})
       .pipe(map(res => res.json()));
   }
   addReview(review) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/reviews/addreview', review, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/reviews/addreview', review, {headers: headers})
       .pipe(map(res => res.json()));
   }
   authenticateUser(user) {
