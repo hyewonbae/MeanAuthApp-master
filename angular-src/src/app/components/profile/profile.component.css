@@ -1,43 +1,21 @@
-.users .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 1.6em 1.4m 0 1.4em;
-    background-color: #f5d3d8;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 3.6em;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-  }
-  .users {
-    margin: 0 0 2em 0;
-    list-style-type: none;
-    padding: 0;
-    width: 25em;
-  }
-  .users li {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: rgb(236, 211, 235);
-    margin: .5em;
-    padding: .3em 0;
-    height: 3.6em;
-    border-radius: 4px;
-  }
-  .users li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
-  }
-  .users li:hover {
-    color: black;
-    background-color: #DDD;
-    left: .1em;
-  }
-  .users .text {
-    position: relative;
-    top: -3px;
-  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+
+}
+.bg1 { background-color: rgb(255, 248, 232);  }
+.bg2 { background-color:#FFFFFF; }
+
+
+th {
+  color: rgb(70, 69, 69);
+ 
+}
+h3{
+text-align: center;
+}

@@ -27,5 +27,15 @@ export class StorelistComponent implements OnInit {
       return false;
     })
   }
-
+  deletestores(){
+    this.authService.deleteStore().subscribe(data =>
+      {
+         this.stores = data.store; 
+         console.log("성공");
+        },
+       err => { 
+         console.log(err); 
+        return false;
+       });
+    }
 }

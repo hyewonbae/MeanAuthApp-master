@@ -18,7 +18,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://13.209.244.98:3000/newus/deleteuser', {headers: headers})
+    return this.http.get('http://localhost:3000/newus/deleteuser', {headers: headers})
       .pipe(map(res => res.json()));
   } 
   deleteReview(){
@@ -26,6 +26,13 @@ export class AuthService {
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
     return this.http.get('http://localhost:3000/reviews/deletereview', {headers: headers})
+      .pipe(map(res => res.json()));
+  }
+  deleteStore(){
+    let headers = new Headers();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/stores/deletestore', {headers: headers})
       .pipe(map(res => res.json()));
   }
   getStore() {   /////////////////////요부분
@@ -72,7 +79,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://13.209.244.98:3000/newus/userlist', {headers: headers})
+    return this.http.get('http://localhost:3000/newus/userlist', {headers: headers})
       .pipe(map(res => res.json()));
   }
 

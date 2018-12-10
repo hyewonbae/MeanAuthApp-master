@@ -23,9 +23,7 @@ module.exports.getReviewAll = function(id, callback){//////////////////////////�
     Review.find({},function(err,results){
     if(err) {throw err;}
     if (results) {
-      review = results[0]._doc.name;
-			console.log('리뷰정보:', 
-          results[0]._doc.name, results[1]._doc.name);
+    
           Review.find(id,results);
 		}
   })

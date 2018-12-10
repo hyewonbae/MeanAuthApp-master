@@ -63,6 +63,14 @@ res.json({store:store});
   });
  
 });
+router.get('/deletestore', (req, res, next) => { 
+
+  Store.deleteStore((err, store) => { 
+    if(err) {throw err;}
+    res.json({store:store});
+
+  });
+});
 //==================================================>
 
 module.exports = router;

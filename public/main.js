@@ -682,7 +682,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".users .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .users {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 25em;\r\n  }\r\n  .users li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(236, 211, 235);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .users li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .users li:hover {\r\n    color: black;\r\n    background-color: #DDD;\r\n    left: .1em;\r\n  }\r\n  .users .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }"
+module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n\r\n}\r\n\r\n.bg1 { background-color: rgb(255, 248, 232);  }\r\n\r\n.bg2 { background-color:#FFFFFF; }\r\n\r\nth {\r\n  color: rgb(70, 69, 69);\r\n \r\n}\r\n\r\nh3{\r\ntext-align: center;\r\n}"
 
 /***/ }),
 
@@ -693,7 +693,7 @@ module.exports = ".users .badge {\r\n    display: inline-block;\r\n    font-size
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deleteusers()\">\r\n  <p>Userlist</p>\r\n  <ul class=\"users\">\r\n    <li *ngFor=\"let user of users; let i=index\" style=\"text-align:center\"> \r\n      {{i+1}}:&nbsp;&nbsp;Id:&nbsp;{{user.name}} &nbsp;Username:&nbsp;{{user.username}}\r\n       &nbsp;<input type=\"submit\"  value=\"X\"> \r\n  </li> \r\n  </ul>\r\n  </form>"
+module.exports = "<form (submit)=\"deleteusers()\">\r\n    <div class=\"container\">\r\n      <h3>Userlist</h3>      \r\n      <table class=\"table table-condensed\" >\r\n        <thead>\r\n          <tr>\r\n            <th style=\"text-align: center\" width=\"20%\">No</th>\r\n            <th style=\"text-align: center\" width=\"30%\">ID</th>\r\n            <th style=\"text-align: center\" width=\"40%\">USERNAME</th>\r\n            <th style=\"text-align: center\" width=\"10%\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let user of users; let i=index\" style=\"text-align:center\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n            <th style=\"text-align: center\" width=\"20%\">{{i+1}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.name}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.username}}</th>\r\n            <th style=\"text-align: center\" width=\"20%\"><input type=\"submit\"  value=\"X\"> </th>\r\n          </tr>\r\n       </tbody>\r\n       </table>\r\n       </div>\r\n      </form>"
 
 /***/ }),
 
@@ -899,7 +899,7 @@ module.exports = "/*table {\r\n    border-collapse: collapse;\r\n    width: 100%
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">번호</th>\r\n        <th style=\"text-align: center\" width=\"25%\">가게명</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n          \r\n      </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<form (submit)=\"deletereviews()\">\r\n    <input type=\"submit\"  value=\"delete\">&nbsp; <a class=\"btn btn-secondary\">edit</a>\r\n    </form>\r\n    \r\n    \r\n     \r\n      "
+module.exports = "<form (submit)=\"deletereviews()\">\r\n<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">번호</th>\r\n        <th style=\"text-align: center\" width=\"25%\">가게명</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n        <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n        <th style=\"text-align: center\" width=\"10%\"> <input type=\"submit\"  value=\"delete\"></th>\r\n      </tr>\r\n    </tbody>\r\n</table>\r\n\r\n\r\n   &nbsp; <a class=\"btn btn-secondary\">edit</a>\r\n    </form>\r\n    \r\n    \r\n     \r\n      "
 
 /***/ }),
 
@@ -976,7 +976,7 @@ var ReviewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".stores .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .stores {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 70em;\r\n  }\r\n  .stores li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(237, 222, 243);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .stores li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .stores li:hover {\r\n    color: rgb(255, 255, 255);\r\n    background-color: rgb(199, 230, 207);\r\n    left: .1em;\r\n  }\r\n  .stores .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }\r\n  "
+module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n\r\n}\r\n\r\n.bg1 { background-color: rgb(255, 248, 232);  }\r\n\r\n.bg2 { background-color:#FFFFFF; }\r\n\r\nth {\r\n  color: rgb(70, 69, 69);\r\n \r\n}\r\n\r\nh3{\r\ntext-align: center;\r\n}"
 
 /***/ }),
 
@@ -987,7 +987,7 @@ module.exports = ".stores .badge {\r\n    display: inline-block;\r\n    font-siz
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Storelist</p>\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores; let i =index\"> \r\n      <span class=\"badge\">{{i+1}}</span>가게명:&nbsp;{{store.name}}&nbsp;&nbsp;&nbsp;\r\n      메뉴:&nbsp;{{store.des1}}&nbsp;&nbsp;{{store.des2}}&nbsp;&nbsp;{{store.des3}}&nbsp;&nbsp;\r\n      전화:&nbsp;{{store.call}}&nbsp;&nbsp;주소:&nbsp;{{store.add}}\r\n      &nbsp;&nbsp;예약대기자수:&nbsp;{{store.count}}\r\n</li> \r\n</ul>"
+module.exports = "<form (submit)=\"deletestores()\">\r\n\r\n<div class=\"container\">\r\n    <h3>Storelist</h3>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"10%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <input type=\"submit\"  value=\"delete\"></th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div></form>"
 
 /***/ }),
 
@@ -1024,6 +1024,16 @@ var StorelistComponent = /** @class */ (function () {
     StorelistComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.authService.getStore().subscribe(function (data) {
+            _this.stores = data.store;
+            console.log("성공");
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    StorelistComponent.prototype.deletestores = function () {
+        var _this = this;
+        this.authService.deleteStore().subscribe(function (data) {
             _this.stores = data.store;
             console.log("성공");
         }, function (err) {
@@ -1134,7 +1144,7 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/newus/deleteuser', { headers: headers })
+        return this.http.get('http://localhost:3000/newus/deleteuser', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteReview = function () {
@@ -1142,6 +1152,13 @@ var AuthService = /** @class */ (function () {
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         return this.http.get('http://localhost:3000/reviews/deletereview', { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
+    };
+    AuthService.prototype.deleteStore = function () {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.get('http://localhost:3000/stores/deletestore', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getStore = function () {
@@ -1186,7 +1203,7 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/newus/userlist', { headers: headers })
+        return this.http.get('http://localhost:3000/newus/userlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {

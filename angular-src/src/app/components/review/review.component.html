@@ -1,9 +1,11 @@
+<form (submit)="deletereviews()">
 <table class="table table-striped">
   <thead>
       <tr>
         <th style="text-align: center" width="15%">번호</th>
         <th style="text-align: center" width="25%">가게명</th>
         <th style="text-align: center" width="60%">내용</th>
+        <th style="text-align: center" width="10%">삭제</th>
       
       </tr>
     </thead>
@@ -13,13 +15,13 @@
           <span class="badge">{{i+1}}</span></th>
         <th style="text-align: center" width="25%">{{review.name}}</th>
         <th style="text-align: center" width="60%">{{review.des}}</th>
-          
+        <th style="text-align: center" width="10%"> <input type="submit"  value="delete"></th>
       </tr>
     </tbody>
 </table>
 
-<form (submit)="deletereviews()">
-    <input type="submit"  value="delete">&nbsp; <a class="btn btn-secondary">edit</a>
+
+   &nbsp; <a class="btn btn-secondary">edit</a>
     </form>
     
     

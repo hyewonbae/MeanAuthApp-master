@@ -99,3 +99,12 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
     callback(null, isMatch);
   });
 }
+module.exports.deleteStore=function(id,callback){
+  Store.deleteOne({},function(err,results){
+        if(err) {throw err;}
+        if (results) {
+          console.log("스토어삭제")
+          Store.getStoreAll(id,results);
+          }
+  })
+}
