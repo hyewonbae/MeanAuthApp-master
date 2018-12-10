@@ -1,20 +1,27 @@
 <table class="table table-striped">
-    <colgroup>
-      <col class="num"/>
-      <col class="title"/>
-      <col class="writer"/>
-      <col class="date"/>
-    </colgroup>
-    <thead>
+  <thead>
       <tr>
-        <th style="text-align: center" width="10%">번호</th>
-        <th style="text-align: center" width="60%">제목</th>
-        <th style="text-align: center" width="20%">작성자</th>
-        <th style="text-align: center" width="10%">날짜</th>
+        <th style="text-align: center" width="15%">번호</th>
+        <th style="text-align: center" width="25%">가게명</th>
+        <th style="text-align: center" width="60%">내용</th>
       
       </tr>
     </thead>
-    </table>
-    <a class="btn btn-secondary">edit</a>&nbsp;
-    <a class="btn btn-secondary">delete</a>
+    <tbody>
+     <tr class="reviews" *ngFor="let review of reviews; let i =index">
+        <th style="text-align: center" width="15%"> 
+          <span class="badge">{{i+1}}</span></th>
+        <th style="text-align: center" width="25%">{{review.name}}</th>
+        <th style="text-align: center" width="60%">{{review.des}}</th>
+          
+      </tr>
+    </tbody>
+</table>
+
+<form (submit)="deletereviews()">
+    <input type="submit"  value="delete">&nbsp; <a class="btn btn-secondary">edit</a>
+    </form>
+    
+    
+     
       

@@ -741,7 +741,7 @@ var ProfileComponent = /** @class */ (function () {
     };
     ProfileComponent.prototype.deleteusers = function () {
         var _this = this;
-        this.authService.delete().subscribe(function (data) {
+        this.authService.deleteUser().subscribe(function (data) {
             _this.users = data.user;
             console.log("성공");
         }, function (err) {
@@ -888,7 +888,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\r\n    border-collapse: collapse;\r\n    width: 100%;\r\n}\r\n\r\nth, td {\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\n/* tr:nth-child(even){background-color: #f2f2f2} */\r\n\r\nth {\r\n    background-color: rgb(217, 250, 219);\r\n    color: rgb(97, 97, 97);\r\n}"
+module.exports = "/*table {\r\n    border-collapse: collapse;\r\n    width: 100%;\r\n}\r\n\r\nth, td {\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\n/* tr:nth-child(even){background-color: #f2f2f2} */\r\n/*\r\nth {\r\n    background-color: rgb(217, 250, 219);\r\n    color: rgb(97, 97, 97);\r\n}*/\r\n"
 
 /***/ }),
 
@@ -899,7 +899,7 @@ module.exports = "table {\r\n    border-collapse: collapse;\r\n    width: 100%;\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-striped\">\r\n    <colgroup>\r\n      <col class=\"num\"/>\r\n      <col class=\"title\"/>\r\n      <col class=\"writer\"/>\r\n      <col class=\"date\"/>\r\n    </colgroup>\r\n    <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"10%\">번호</th>\r\n        <th style=\"text-align: center\" width=\"60%\">제목</th>\r\n        <th style=\"text-align: center\" width=\"20%\">작성자</th>\r\n        <th style=\"text-align: center\" width=\"10%\">날짜</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    </table>\r\n    <a class=\"btn btn-secondary\">edit</a>&nbsp;\r\n    <a class=\"btn btn-secondary\">delete</a>\r\n      "
+module.exports = "<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">번호</th>\r\n        <th style=\"text-align: center\" width=\"25%\">가게명</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n          \r\n      </tr>\r\n    </tbody>\r\n</table>\r\n\r\n<form (submit)=\"deletereviews()\">\r\n    <input type=\"submit\"  value=\"delete\">&nbsp; <a class=\"btn btn-secondary\">edit</a>\r\n    </form>\r\n    \r\n    \r\n     \r\n      "
 
 /***/ }),
 
@@ -914,6 +914,8 @@ module.exports = "<table class=\"table table-striped\">\r\n    <colgroup>\r\n   
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewComponent", function() { return ReviewComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -924,10 +926,32 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ReviewComponent = /** @class */ (function () {
-    function ReviewComponent() {
+    function ReviewComponent(authService, router) {
+        this.authService = authService;
+        this.router = router;
     }
     ReviewComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.getReview().subscribe(function (data) {
+            _this.reviews = data.review;
+            console.log("성공");
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    ReviewComponent.prototype.deletereviews = function () {
+        var _this = this;
+        this.authService.deleteReview().subscribe(function (data) {
+            _this.reviews = data.review;
+            console.log("성공");
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
     };
     ReviewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -935,7 +959,8 @@ var ReviewComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./review.component.html */ "./src/app/components/review/review.component.html"),
             styles: [__webpack_require__(/*! ./review.component.css */ "./src/app/components/review/review.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
     ], ReviewComponent);
     return ReviewComponent;
 }());
@@ -1105,11 +1130,18 @@ var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
     }
-    AuthService.prototype.delete = function () {
+    AuthService.prototype.deleteUser = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/newus/delete', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/newus/deleteuser', { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
+    };
+    AuthService.prototype.deleteReview = function () {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.get('http://localhost:3000/reviews/deletereview', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getStore = function () {
@@ -1123,7 +1155,7 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', { headers: headers })
+        return this.http.get('http://localhost:3000/reviews/reviewlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.registerNewu = function (newu) {

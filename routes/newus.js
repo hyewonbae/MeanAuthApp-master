@@ -35,7 +35,7 @@ res.json({user:user});
  
 });
 //==================================================>
-router.get('/delete', (req, res, next) => { 
+router.get('/deleteuser', (req, res, next) => { 
 
   Newu.deleteUser((err, user) => { 
     if(err) {throw err;}

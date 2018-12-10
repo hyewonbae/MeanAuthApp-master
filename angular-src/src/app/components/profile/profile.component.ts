@@ -28,7 +28,7 @@ export class ProfileComponent implements OnInit {
     })
   }
   deleteusers(){
-    this.authService.delete().subscribe(data =>
+    this.authService.deleteUser().subscribe(data =>
       {
          this.users = data.user; 
          console.log("성공");

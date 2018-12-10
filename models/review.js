@@ -50,3 +50,12 @@ module.exports.addReview = function(newReview, callback){
     
 }
 
+module.exports.deleteReview=function(id,callback){
+  Review.deleteOne({},function(err,results){
+        if(err) {throw err;}
+        if (results) {
+          console.log("리뷰삭제")
+          Review.getReviewAll(id,results);
+          }
+  })
+}

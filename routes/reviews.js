@@ -56,6 +56,14 @@ res.json({review:review});
   });
  
 });
+router.get('/deletereview', (req, res, next) => { 
+
+  Review.deleteReview((err, review) => { 
+    if(err) {throw err;}
+    res.json({review:review});
+
+  });
+});
 //==================================================>
 
 module.exports = router;

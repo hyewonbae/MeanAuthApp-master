@@ -14,11 +14,18 @@ export class AuthService {
   review: any;
 
   constructor(private http:Http) { }
-  delete(){
+  deleteUser(){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://13.209.244.98:3000/newus/delete', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/newus/deleteuser', {headers: headers})
+      .pipe(map(res => res.json()));
+  } 
+  deleteReview(){
+    let headers = new Headers();
+    headers.append('Authorization', this.authToken);
+    headers.append('Content-Type', 'application/json');
+    return this.http.get('http://localhost:3000/reviews/deletereview', {headers: headers})
       .pipe(map(res => res.json()));
   }
   getStore() {   /////////////////////요부분
@@ -32,7 +39,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', {headers: headers})
+    return this.http.get('http://localhost:3000/reviews/reviewlist', {headers: headers})
       .pipe(map(res => res.json()));
   }
 
