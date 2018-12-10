@@ -4,18 +4,18 @@
       <table class="table table-condensed" >
         <thead>
           <tr>
-            <th style="text-align: center" width="20%">No</th>
-            <th style="text-align: center" width="30%">ID</th>
+            <th style="text-align: center" width="10%">No</th>
+            <th style="text-align: center" width="40%">ID</th>
             <th style="text-align: center" width="40%">USERNAME</th>
             <th style="text-align: center" width="10%">Delete</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let user of users; let i=index" style="text-align:center" onMouseOver="this.className='bg1'" onMouseOut="this.className='bg2'">
-            <th style="text-align: center" width="20%">{{i+1}}</th>
+            <th style="text-align: center" width="10%">{{i+1}}</th>
             <th style="text-align: center" width="40%">{{user.name}}</th>
             <th style="text-align: center" width="40%">{{user.username}}</th>
-            <th style="text-align: center" width="20%"><input type="submit"  value="X"> </th>
+            <th style="text-align: center" width="10%"><input type="submit"  value="X"> </th>
           </tr>
        </tbody>
        </table>
