@@ -36,7 +36,7 @@ export class AuthService {
   addStore(store) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://13.209.244.98:3000/stores/addstore', store, {headers: headers})
+    return this.http.post('http://localhost:3000/stores/addstore', store, {headers: headers})
       .pipe(map(res => res.json()));
   }
 

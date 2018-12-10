@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class AddstoreComponent implements OnInit {
   name: String;
-  des: String;
+  des1: String;
+  des2: String;
+  des3: String;
   call: Number;
   add: String;
   count:Number;
@@ -26,7 +28,9 @@ export class AddstoreComponent implements OnInit {
   onAddStoreSubmit() {
     const store = {
       name: this.name,
-      des: this.des,
+      des1: this.des1,
+      des2: this.des2,
+      des3: this.des3,
       call: this.call,
       add: this.add
     }

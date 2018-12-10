@@ -203,7 +203,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <br>\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n              <tr>\r\n                  <th>NAME </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>MENU </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"des\" name=\"des\"  class=\"form-control\" placeholder=\"Menu\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>CALL </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>ADDRESS </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n              </tr>\r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
+module.exports = "<div class=\"container\">\r\n    <br>\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n              <tr>\r\n                  <th>NAME </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>MENU1</th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n              </tr>\r\n              <tr>\r\n                 <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n              </tr>\r\n              <tr>\r\n                 <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>CALL </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>ADDRESS </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n              </tr>\r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
 
 /***/ }),
 
@@ -250,7 +250,9 @@ var AddstoreComponent = /** @class */ (function () {
         var _this = this;
         var store = {
             name: this.name,
-            des: this.des,
+            des1: this.des1,
+            des2: this.des2,
+            des3: this.des3,
             call: this.call,
             add: this.add
         };
@@ -948,7 +950,7 @@ var ReviewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".stores .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .stores {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 40em;\r\n  }\r\n  .stores li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(237, 222, 243);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .stores li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .stores li:hover {\r\n    color: rgb(255, 255, 255);\r\n    background-color: rgb(199, 230, 207);\r\n    left: .1em;\r\n  }\r\n  .stores .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }\r\n  "
+module.exports = ".stores .badge {\r\n    display: inline-block;\r\n    font-size: small;\r\n    color: white;\r\n    padding: 1.6em 1.4m 0 1.4em;\r\n    background-color: #f5d3d8;\r\n    line-height: 1em;\r\n    position: relative;\r\n    left: -1px;\r\n    top: -4px;\r\n    height: 3.6em;\r\n    margin-right: .8em;\r\n    border-radius: 4px 0 0 4px;\r\n  }\r\n  .stores {\r\n    margin: 0 0 2em 0;\r\n    list-style-type: none;\r\n    padding: 0;\r\n    width: 70em;\r\n  }\r\n  .stores li {\r\n    cursor: pointer;\r\n    position: relative;\r\n    left: 0;\r\n    background-color: rgb(237, 222, 243);\r\n    margin: .5em;\r\n    padding: .3em 0;\r\n    height: 3.6em;\r\n    border-radius: 4px;\r\n  }\r\n  .stores li.selected:hover {\r\n    background-color: #BBD8DC !important;\r\n    color: white;\r\n  }\r\n  .stores li:hover {\r\n    color: rgb(255, 255, 255);\r\n    background-color: rgb(199, 230, 207);\r\n    left: .1em;\r\n  }\r\n  .stores .text {\r\n    position: relative;\r\n    top: -3px;\r\n  }\r\n  "
 
 /***/ }),
 
@@ -959,7 +961,7 @@ module.exports = ".stores .badge {\r\n    display: inline-block;\r\n    font-siz
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>Storelist</p>\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores; let i =index\"> \r\n      <span class=\"badge\">{{i+1}}</span>{{store.name}}&nbsp;&nbsp;&nbsp;\r\n      {{store.des}}&nbsp;&nbsp;{{store.call}}&nbsp;&nbsp;{{store.add}}\r\n      &nbsp;&nbsp;예약대기자수:&nbsp;{{store.count}}\r\n</li> \r\n</ul>"
+module.exports = "<p>Storelist</p>\r\n<ul class=\"stores\">\r\n  <li *ngFor=\"let store of stores; let i =index\"> \r\n      <span class=\"badge\">{{i+1}}</span>가게명:&nbsp;{{store.name}}&nbsp;&nbsp;&nbsp;\r\n      메뉴:&nbsp;{{store.des1}}&nbsp;&nbsp;{{store.des2}}&nbsp;&nbsp;{{store.des3}}&nbsp;&nbsp;\r\n      전화:&nbsp;{{store.call}}&nbsp;&nbsp;주소:&nbsp;{{store.add}}\r\n      &nbsp;&nbsp;예약대기자수:&nbsp;{{store.count}}\r\n</li> \r\n</ul>"
 
 /***/ }),
 
@@ -1125,7 +1127,7 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.addStore = function (store) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/stores/addstore', store, { headers: headers })
+        return this.http.post('http://localhost:3000/stores/addstore', store, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {

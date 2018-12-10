@@ -9,7 +9,9 @@ const Store = require('../models/store');
 router.post('/addstore', function(req, res, next) {
   const newStore = new Store({
     name: req.body.name,
-    des: req.body.des,
+    des1: req.body.des1,
+    des2: req.body.des2,
+    des3: req.body.des3,
     call:req.body.call,
     add:req.body.add
     
@@ -23,15 +25,7 @@ router.post('/addstore', function(req, res, next) {
     }
   });
 });
-router.post('/storelist', (req, res, next) => { 
 
-  Store.getStoreAll((err, study) => { 
-
-    res.json({study: study});
-
-  });
-
-});
 //=======================================>
 
 /* GET users listing. */

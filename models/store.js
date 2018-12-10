@@ -11,7 +11,17 @@ const StoreSchema = mongoose.Schema({
   //   type: String,
   //   required: true
   // },
-  des: {
+  des1: {
+    type: String,
+    required: true
+  
+  },
+  des2: {
+    type: String,
+    required: true
+  
+  },
+  des3: {
     type: String,
     required: true
   
@@ -50,9 +60,17 @@ module.exports.getStoreByname = function(name, callback){
   const query = {name: name}
   Store.findOne(query, callback);
 }
-module.exports.getStoreBydes= function(des, callback){
-  const query1 = {des: des}
-  Store.findOne(query1, callback);
+module.exports.getStoreBydes1= function(des1, callback){
+  const query11 = {des1: des1}
+  Store.findOne(query11, callback);
+}
+module.exports.getStoreBydes2= function(des2, callback){
+  const query12 = {des2: des2}
+  Store.findOne(query12, callback);
+}
+module.exports.getStoreBydes3= function(des3, callback){
+  const query13 = {des3: des3}
+  Store.findOne(query13, callback);
 }
 module.exports.getStoreBycall = function(call, callback){
   const query2 = {call: call}
