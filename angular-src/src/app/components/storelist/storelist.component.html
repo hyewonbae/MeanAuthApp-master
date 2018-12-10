@@ -5,7 +5,7 @@
     <table class="table table-condensed" >
       <thead>
         <tr>
-          <th style="text-align: center" width="10%">음식점</th>
+          <th style="text-align: center" width="20%">음식점</th>
           <th style="text-align: center" width="50%">대표메뉴</th>
           <th style="text-align: center" width="10%">전화</th>
           <th style="text-align: center" width="10%">주소</th>
@@ -15,11 +15,11 @@
       </thead>
       <tbody>
         <tr *ngFor="let store of stores;" onMouseOver="this.className='bg1'" onMouseOut="this.className='bg2'">
-          <th style="text-align: center" width="10%">{{store.name}}</th>
+          <th style="text-align: center" width="20%">{{store.name}}</th>
           <th style="text-align: center" width="50%">{{store.des1}},{{store.des2}},{{store.des3}}</th>
           <th style="text-align: center" width="10%">{{store.call}}</th>
           <th style="text-align: center" width="10%">{{store.add}}</th>
-          <th style="text-align: center" width="10%">{{store.count}}</th>
+          <th style="text-align: center" width="20%">{{store.count}}</th>
           <th style="text-align: center" width="10%"> <input type="submit"  value="delete"></th>
       
         </tr>

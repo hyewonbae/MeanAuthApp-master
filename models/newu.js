@@ -52,9 +52,7 @@ module.exports.getUserAll = function(id, callback){
   Newu.find({},function(err,results){
     if(err) {throw err;}
     if (results) {
-      // user = results[0]._doc.name;
-         console.log('유저정보:', 
-          results[0]._doc.username, results[0]._doc.name,results[0]._doc.password);
+      
       Newu.find(id,results);
       }
   })

@@ -14,7 +14,7 @@ export class AddstoreComponent implements OnInit {
   des1: String;
   des2: String;
   des3: String;
-  call: Number;
+  call: String;
   add: String;
   count:Number;
   pic:any;

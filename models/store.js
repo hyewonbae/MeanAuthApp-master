@@ -27,7 +27,7 @@ const StoreSchema = mongoose.Schema({
   
   },
   call: {
-    type: Number,
+    type: String,
     required: true
   },
   add: {
@@ -47,9 +47,7 @@ module.exports.getStoreAll = function(id, callback){//////////////////////////�
   Store.find({},function(err,results){
     if(err) {throw err;}
     if (results) {
-      store = results[0]._doc.name;
-			console.log('맛집정보:', 
-          results[0]._doc.name, results[1]._doc.name,results[0]._doc.call,results[0]._doc.add);
+      
       Store.find(id,results);
 		}
   })
