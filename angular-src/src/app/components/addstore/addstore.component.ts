@@ -17,6 +17,7 @@ export class AddstoreComponent implements OnInit {
   call: Number;
   add: String;
   count:Number;
+  pic:any;
   constructor(private validateService: ValidateService, 
     private flashMessage: NgFlashMessageService, 
     private authService: AuthService,
@@ -32,7 +33,8 @@ export class AddstoreComponent implements OnInit {
       des2: this.des2,
       des3: this.des3,
       call: this.call,
-      add: this.add
+      add: this.add,
+      pic:this.pic
     }
 
   // Required Fields

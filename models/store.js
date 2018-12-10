@@ -36,6 +36,9 @@ const StoreSchema = mongoose.Schema({
   },
   count: {
     type: Number
+  },
+  pic: {
+    type: String
   }
 });
 
@@ -79,6 +82,10 @@ module.exports.getStoreBycall = function(call, callback){
 module.exports.getStoreByadd = function(add, callback){
   const query3 = {add: add}
   Store.findOne(query3, callback);
+}
+module.exports.getStoreBypic = function(pic, callback){
+  const query4 = {pic: pic}
+  Store.findOne(query4, callback);
 }
 module.exports.addStore = function(newStore, callback){
   

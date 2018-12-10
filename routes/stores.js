@@ -13,7 +13,8 @@ router.post('/addstore', function(req, res, next) {
     des2: req.body.des2,
     des3: req.body.des3,
     call:req.body.call,
-    add:req.body.add
+    add:req.body.add,
+    pic: req.body.pic
     
   });
 
