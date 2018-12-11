@@ -196,7 +196,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "th{\r\n    font-size: 15px\r\n}"
 
 /***/ }),
 
@@ -207,7 +207,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <br>\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n              <tr>\r\n                  <th>NAME </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>MENU1</th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n              </tr>\r\n              <tr>\r\n                 <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n              </tr>\r\n              <tr>\r\n                 <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>CALL </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n              </tr>\r\n              <tr>\r\n                  <th>ADDRESS </th>\r\n                  <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n              </tr>\r\n              <tr>\r\n                <th>PICTURE </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"pic\" name=\"pic\" class=\"form-control\" placeholder=\"Picture\"></td>\r\n            </tr>\r\n              \r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
+module.exports = "<div class=\"container\">\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n            <tr>\r\n                <th>NAME </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU1</th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>CALL </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>ADDRESS </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>PICTURE </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"pic\" name=\"pic\" class=\"form-control\" placeholder=\"Picture\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>COUNT </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"count\" name=\"count\" class=\"form-control\" placeholder=\"Count\"></td>\r\n            </tr>\r\n              \r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
 
 /***/ }),
 
@@ -259,7 +259,8 @@ var AddstoreComponent = /** @class */ (function () {
             des3: this.des3,
             call: this.call,
             add: this.add,
-            pic: this.pic
+            pic: this.pic,
+            count: this.count
         };
         // Required Fields
         if (!this.validateService.validateAddStore(store)) {
@@ -310,7 +311,7 @@ var AddstoreComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Courier New', Courier, monospace;\r\n    font-size: 250%;\r\n}\r\ndiv{background:#ede9f5;}"
+module.exports = "h1{\r\n    font-family: 'Courier New', Courier, Gungsuh ;\r\n}\r\n"
 
 /***/ }),
 
@@ -321,7 +322,7 @@ module.exports = "h1{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\n  <h1><b>Welcome to Quiclick!</b></h1>\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n        <h5>COMPANY INFO</h5>\n        <p>company:(주)quiclick</p>\n        <P>Email:BSJ@hansung.ac.kr</P>\n        <p>TEL:1234-5678</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>QUICLICK</h5>\n        <p>We offer you the best restaurant reservation service :)</p>\n        <p>We will always strive for better service.</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>App</h5>\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n      </div>\n    </div>\n</div>\n"
+module.exports = "<h1>이 곳은 관리자 페이지 입니다.</h1>"
 
 /***/ }),
 
@@ -384,7 +385,7 @@ module.exports = "div{background:#ede9f5;}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" >\r\n\r\n음식점:\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> <br>\r\n리뷰게시판: \r\n<a routerLink = \"/review\">review</a>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" >\r\n<h3>\r\n음식점:\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> </h3><br>\r\n<h3>리뷰게시판: \r\n<a routerLink = \"/review\">review</a></h3>\r\n</div>"
 
 /***/ }),
 
@@ -703,7 +704,7 @@ var NavbarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n\r\n}\r\n\r\n.bg1 { background-color: rgb(255, 248, 232);  }\r\n\r\n.bg2 { background-color:#FFFFFF; }\r\n\r\nth {\r\n  color: rgb(70, 69, 69);\r\n \r\n}\r\n\r\nh3{\r\ntext-align: center;\r\n}"
+module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth {\r\n  text-align: left;\r\n  padding: 8px;\r\n  font-size:15px;\r\n  color: rgb(70, 69, 69);\r\n\r\n}\r\n\r\n.bg1 { background-color: rgb(255, 248, 232);  }\r\n\r\n.bg2 { background-color:#FFFFFF; }\r\n\r\nh2{\r\ntext-align: center;\r\n}"
 
 /***/ }),
 
@@ -714,7 +715,7 @@ module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deleteusers()\">\r\n    <div class=\"container\">\r\n      <h3>Userlist</h3>      \r\n      <table class=\"table table-condensed\" >\r\n        <thead>\r\n          <tr>\r\n            <th style=\"text-align: center\" width=\"10%\">No</th>\r\n            <th style=\"text-align: center\" width=\"40%\">ID</th>\r\n            <th style=\"text-align: center\" width=\"40%\">USERNAME</th>\r\n            <th style=\"text-align: center\" width=\"10%\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let user of users; let i=index\" style=\"text-align:center\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n            <th style=\"text-align: center\" width=\"10%\">{{i+1}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.name}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.username}}</th>\r\n            <th style=\"text-align: center\" width=\"10%\"><input type=\"submit\"  value=\"X\"> </th>\r\n          </tr>\r\n       </tbody>\r\n       </table>\r\n       </div>\r\n      </form>"
+module.exports = "<form (submit)=\"deleteusers()\">\r\n    <div class=\"container\">\r\n      <h2>Userlist</h2>      \r\n      <table class=\"table table-condensed\" >\r\n        <thead>\r\n          <tr>\r\n            <th style=\"text-align: center\" width=\"10%\">No</th>\r\n            <th style=\"text-align: center\" width=\"40%\">ID</th>\r\n            <th style=\"text-align: center\" width=\"40%\">USERNAME</th>\r\n            <th style=\"text-align: center\" width=\"10%\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let user of users; let i=index\" style=\"text-align:center\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n            <th style=\"text-align: center\" width=\"10%\">{{i+1}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.name}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.username}}</th>\r\n            <th style=\"text-align: center\" width=\"10%\"><button type=\"submit\" span class=\"glyphicon glyphicon-trash\"></button> </th>\r\n          </tr>\r\n       </tbody>\r\n       </table>\r\n       </div>\r\n      </form>"
 
 /***/ }),
 
@@ -909,7 +910,7 @@ var RegisterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*table {\r\n    border-collapse: collapse;\r\n    width: 100%;\r\n}\r\n\r\nth, td {\r\n    text-align: left;\r\n    padding: 8px;\r\n}\r\n\r\n/* tr:nth-child(even){background-color: #f2f2f2} */\r\n/*\r\nth {\r\n    background-color: rgb(217, 250, 219);\r\n    color: rgb(97, 97, 97);\r\n}*/\r\n"
+module.exports = "th{\r\n    font-size:15px;\r\n}"
 
 /***/ }),
 
@@ -920,7 +921,7 @@ module.exports = "/*table {\r\n    border-collapse: collapse;\r\n    width: 100%
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deletereviews()\">\r\n<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">No</th>\r\n        <th style=\"text-align: center\" width=\"25%\">음식점</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n        <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n        <th style=\"text-align: center\" width=\"10%\"> <input type=\"submit\"  value=\"delete\"></th>\r\n      </tr>\r\n    </tbody>\r\n</table>\r\n\r\n\r\n   &nbsp; <a class=\"btn btn-secondary\">edit</a>\r\n    </form>\r\n    \r\n    \r\n     \r\n      "
+module.exports = "<form (submit)=\"deletereviews()\">\r\n<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">No</th>\r\n        <th style=\"text-align: center\" width=\"25%\">음식점</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n        <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n        <th style=\"text-align: center\" width=\"10%\"><button type=\"submit\" span class=\"glyphicon glyphicon-trash\"></button> </th>\r\n      </tr>\r\n    </tbody>\r\n</table>\r\n\r\n\r\n   &nbsp; <a class=\"btn btn-secondary\">edit</a>\r\n    </form>\r\n    \r\n    \r\n     \r\n      "
 
 /***/ }),
 
@@ -997,7 +998,7 @@ var ReviewComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n\r\n}\r\n\r\n.bg1 { background-color: rgb(255, 248, 232);  }\r\n\r\n.bg2 { background-color:#FFFFFF; }\r\n\r\nth {\r\n  color: rgb(70, 69, 69);\r\n \r\n}\r\n\r\nh3{\r\ntext-align: center;\r\n}"
+module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n\r\n}\r\n\r\n.bg1 { background-color: rgb(255, 248, 232);  }\r\n\r\n.bg2 { background-color:#FFFFFF; }\r\n\r\nth {\r\n  color: rgb(70, 69, 69);\r\n  font-size:15px\r\n \r\n}\r\n\r\nh2{\r\ntext-align: center;\r\n}"
 
 /***/ }),
 
@@ -1008,7 +1009,7 @@ module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deletestores()\">\r\n\r\n<div class=\"container\">\r\n    <h3>Storelist</h3>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"20%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <input type=\"submit\"  value=\"delete\"></th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div></form>"
+module.exports = "<form (submit)=\"deletestores()\">\r\n\r\n<div class=\"container\">\r\n    <h2>Storelist</h2>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"20%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <button type=\"submit\" span class=\"glyphicon glyphicon-trash\"></button> </th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div></form>"
 
 /***/ }),
 

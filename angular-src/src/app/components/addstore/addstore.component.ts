@@ -34,7 +34,8 @@ export class AddstoreComponent implements OnInit {
       des3: this.des3,
       call: this.call,
       add: this.add,
-      pic:this.pic
+      pic:this.pic,
+      count:this.count
     }
 
   // Required Fields

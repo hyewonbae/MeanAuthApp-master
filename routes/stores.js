@@ -14,8 +14,8 @@ router.post('/addstore', function(req, res, next) {
     des3: req.body.des3,
     call:req.body.call,
     add:req.body.add,
-    pic: req.body.pic
-    
+    pic: req.body.pic,
+    count: req.body.count
   });
 
   Store.addStore(newStore, (err, store) => {

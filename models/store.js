@@ -85,6 +85,10 @@ module.exports.getStoreBypic = function(pic, callback){
   const query4 = {pic: pic}
   Store.findOne(query4, callback);
 }
+module.exports.getStoreBycount = function(count, callback){
+  const query5 = {count: count}
+  Store.findOne(query5, callback);
+}
 module.exports.addStore = function(newStore, callback){
   
       newStore.save(callback);

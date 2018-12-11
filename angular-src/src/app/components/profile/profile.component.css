@@ -3,19 +3,18 @@ table {
   width: 100%;
 }
 
-th, td {
+th {
   text-align: left;
   padding: 8px;
+  font-size:15px;
+  color: rgb(70, 69, 69);
 
 }
 .bg1 { background-color: rgb(255, 248, 232);  }
 .bg2 { background-color:#FFFFFF; }
 
 
-th {
-  color: rgb(70, 69, 69);
- 
-}
-h3{
+
+h2{
 text-align: center;
 }
