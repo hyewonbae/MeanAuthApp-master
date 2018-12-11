@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <ng-flash-message></ng-flash-message>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <ng-flash-message></ng-flash-message>\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -321,7 +321,7 @@ module.exports = "h1{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\">\r\n  <h1><b>Welcome to Quiclick!</b></h1>\r\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n  <div class=\"row\">\r\n      <div class=\"col-md-4\">\r\n        <h5>COMPANY INFO</h5>\r\n        <p>company:(주)quiclick</p>\r\n        <P>Email:BSJ@hansung.ac.kr</P>\r\n        <p>TEL:1234-5678</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h5>QUICLICK</h5>\r\n        <p>We offer you the best restaurant reservation service :)</p>\r\n        <p>We will always strive for better service.</p>\r\n      </div>\r\n      <div class=\"col-md-4\">\r\n        <h5>App</h5>\r\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n      </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1><b>Welcome to Quiclick!</b></h1>\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n  <div class=\"row\">\n      <div class=\"col-md-4\">\n        <h5>COMPANY INFO</h5>\n        <p>company:(주)quiclick</p>\n        <P>Email:BSJ@hansung.ac.kr</P>\n        <p>TEL:1234-5678</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>QUICLICK</h5>\n        <p>We offer you the best restaurant reservation service :)</p>\n        <p>We will always strive for better service.</p>\n      </div>\n      <div class=\"col-md-4\">\n        <h5>App</h5>\n        <p>Quiclick App</p><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\n      </div>\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -510,7 +510,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b>Login</b></h2>\r\n<form (submit)=\"onLoginSubmit()\">\r\n  <div class=\"form-group\">\r\n   \r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\r\n</form>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b>Login</b></h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n   \n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\n</form>\n</div>"
 
 /***/ }),
 
@@ -804,7 +804,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b> Register </b></h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n    \r\n  <div class=\"form-group\" >\r\n  \r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\r\n  </div>\r\n  <div class=\"form-group\"> -->\r\n\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n  </div>\r\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n    \r\n</form>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\n  </div>\n  <div class=\"form-group\"> -->\n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n    \n</form>\n</div>"
 
 /***/ }),
 
@@ -1096,7 +1096,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  usermain works!\n</p>\n"
+module.exports = "<p>\r\n  usermain works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -1447,7 +1447,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\SY\DatabaseExample\Quiclick\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\배혜원\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })
