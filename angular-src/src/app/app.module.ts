@@ -20,6 +20,7 @@ import { AdminmainComponent } from './components/adminmain/adminmain.component';
 import { AddstoreComponent } from './components/addstore/addstore.component';
 import { StorelistComponent } from './components/storelist/storelist.component';
 import { ReviewComponent } from './components/review/review.component';
+import { UsermainComponent } from './components/usermain/usermain.component';
 
 
 const appRoutes: Routes = [
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
   {path:'adminmain', component: AdminmainComponent, canActivate:[AuthGuard]},
   {path:'addstore', component: AddstoreComponent, canActivate:[AuthGuard]},
   {path:'storelist', component: StorelistComponent, canActivate:[AuthGuard]},
-  {path:'review', component: ReviewComponent, canActivate:[AuthGuard]}
+  {path:'review', component: ReviewComponent, canActivate:[AuthGuard]},
+  {path:'usermain', component: UsermainComponent, canActivate:[AuthGuard]}
 ]
 
 @NgModule({
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     AdminmainComponent,
     AddstoreComponent,
     StorelistComponent,
-    ReviewComponent
+    ReviewComponent,
+    UsermainComponent
   ],
   imports: [
     BrowserModule,

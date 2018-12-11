@@ -14,6 +14,7 @@ export class AuthService {
   review: any;
 
   constructor(private http:Http) { }
+  
   deleteUser(){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
@@ -74,7 +75,12 @@ export class AuthService {
     return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
       .pipe(map(res => res.json()));
   }
-
+authenticateNewu(newu) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/newus/authenticate', newu, {headers: headers})
+      .pipe(map(res => res.json()));
+  }
   getProfile() {  
     let headers = new Headers();
     headers.append('Authorization', this.authToken);

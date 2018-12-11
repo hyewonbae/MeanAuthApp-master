@@ -43,4 +43,38 @@ router.get('/deleteuser', (req, res, next) => {
 
   });
 });
+
+router.post('/authenticate', function(req, res, next) {
+  const username = req.body.username;
+  const password = req.body.password;
+  
+  Newu.getNewuByUsername(username, (err, user) => {
+    // if(err) throw err;
+    if(!user) {
+      return res.json({success:false, msg:'NUser not found'});
+    }
+    
+    Newu.comparePassword(password, user.password, (err, isMatch) => {
+      // if(err) throw err;
+      if(isMatch) {
+        const token = jwt.sign({data: user}, config.secret, {
+          expiresIn: 604800  // 1 week in seconds
+        });
+
+        res.json({
+          success: true,
+          token: 'JWT '+token,
+          newu: {
+            id: user._id,
+            name: user.name,
+            username: user.username
+           
+          }
+        });
+      } else {
+        return res.json({success: false, msg:'Wrong password'});
+      }
+    })
+  })
+});
 module.exports = router;

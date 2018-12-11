@@ -27,7 +27,10 @@ export class LoginComponent implements OnInit {
       username: this.username,
       password: this.password
     }
-
+    const newu={
+      username:this.username,
+      password:this.password
+    }
     this.authService.authenticateUser(user).subscribe(data => {
       if(data.success) {
         this.authService.storeUserData(data.token, data.user);
@@ -37,15 +40,37 @@ export class LoginComponent implements OnInit {
           timeout:3000
         });
         this.router.navigate(['adminmain']);
-      } else {
-        this.flashMessage.showFlashMessage({
-            messages: ['너 관리자 아니잖아ㅡㅡ'], 
-            type: 'danger', 
-            timeout:3000
-          });
-          this.router.navigate(['login']);
+      } else{
+        this.authService.authenticateNewu(user).subscribe(data => {
+          if(data.success) {
+            this.authService.storeNewuData(data.token, data.newu);
+            this.flashMessage.showFlashMessage({
+              messages: ['환영합니다~'], 
+              type: 'success', 
+              timeout:3000
+            });
+            this.router.navigate(['usermain']);
+          } else {
+            this.flashMessage.showFlashMessage({
+                messages: ['다시 도전!'], 
+                type: 'danger', 
+                timeout:3000
+              });
+              this.router.navigate(['login']);
+          }
+        });
+        
+
+
+
+
+
+
+
       }
     });
+    
+    
   }
 
 }

@@ -6,22 +6,6 @@ const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
 
-router.post('/register', function(req, res, next) {
-  const newUser = new User({
-    name: req.body.name,
-   // email: req.body.email,
-    username: req.body.username,
-    password: req.body.password
-  });
-
-  User.addUser(newUser, (err, user) => {
-    if(err){
-      res.json({success: false, msg:'Failed to register user', err: err})
-    } else {
-      res.json({success: true, msg:'User registered'})
-    }
-  });
-});
 
 //=======================================>
 
@@ -66,9 +50,6 @@ router.post('/authenticate', function(req, res, next) {
   })
 });
 
-router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
-  res.json({user: req.user});
-});
 
 //==================================================>
 

@@ -112,12 +112,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/addstore/addstore.component */ "./src/app/components/addstore/addstore.component.ts");
 /* harmony import */ var _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/storelist/storelist.component */ "./src/app/components/storelist/storelist.component.ts");
 /* harmony import */ var _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/review/review.component */ "./src/app/components/review/review.component.ts");
+/* harmony import */ var _components_usermain_usermain_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/usermain/usermain.component */ "./src/app/components/usermain/usermain.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -147,7 +149,8 @@ var appRoutes = [
     { path: 'adminmain', component: _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'addstore', component: _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'storelist', component: _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
-    { path: 'review', component: _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
+    { path: 'review', component: _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
+    { path: 'usermain', component: _components_usermain_usermain_component__WEBPACK_IMPORTED_MODULE_20__["UsermainComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -165,7 +168,8 @@ var AppModule = /** @class */ (function () {
                 _components_adminmain_adminmain_component__WEBPACK_IMPORTED_MODULE_16__["AdminmainComponent"],
                 _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"],
                 _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"],
-                _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"]
+                _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"],
+                _components_usermain_usermain_component__WEBPACK_IMPORTED_MODULE_20__["UsermainComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -432,7 +436,7 @@ var DashboardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Courier New', Courier, monospace;\r\n    font-size: 250%;\r\n}\r\ndiv{background:#ede9f5;}\r\na{\r\n    color:pink\r\n}"
+module.exports = "div{background:#ede9f5;\r\n    text-align: center;}\r\n    a{\r\n        color:pink\r\n    }"
 
 /***/ }),
 
@@ -443,7 +447,7 @@ module.exports = "h1{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:930px; height:550px; vertical-align:middle\">\r\n  <h1><b>Welcome to Quiclick!</b></h1>\r\n  <img width=\"300\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n  <div>\r\n    <br>\r\n    <a class=\"btn btn-secondary\" [routerLink]=\"['/register']\">Register</a> &nbsp; \r\n    <a class=\"btn btn-secondary\" [routerLink]=\"['/login']\">AdminLogin</a>\r\n  </div>\r\n</div>\r\n"
+module.exports = "\r\n<div class=\"container\">\r\n    \r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n   \r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n   \r\n    <div class=\"carousel-inner\">\r\n\r\n      <div class=\"item active\">\r\n        <img src=\"http://img.etoday.co.kr/pto_db/2012/08/20120808074429_216169_500_364.jpg\"style=\"margin-left: auto; margin-right: auto;\"alt=\"bhc\" width=600px height=600px; >\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img src=\"https://pds.joins.com/news/component/htmlphoto_mmdata/201701/16/htm_2017011613284392799.jpg\" style=\"margin-left: auto; margin-right: auto;\"alt=\"mom's touch\" width=600px height=600px;>\r\n      </div>\r\n    \r\n      <div class=\"item\">\r\n        <img src=\"https://www.myhawaii.kr/wp-content/uploads/2015/04/2dc1a9dcdd7996157df35053c53f5b12.jpg\" style=\"margin-left: auto; margin-right: auto;\"alt=\"mom's touch\" width=600px height=600px;>\r\n\r\n      </div>\r\n  \r\n    </div>\r\n\r\n   \r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n<br>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h2>COMPANY INFO</h2>\r\n          <h3>company:(주)quiclick</h3>\r\n          <h3>Email:BSJ@hansung.ac.kr</h3>\r\n          <h3>TEL:1234-5678</h3>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>QUICLICK</h2>\r\n          <h3>We offer you the best restaurant reservation service :)</h3>\r\n          <h3>We will always strive for better service.</h3>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>App</h2>\r\n          <h3>Quiclick App</h3><img width=\"30\" src=\"https://img.lovepik.com/element/40053/2679.png_1200.png\">\r\n        </div>\r\n      </div>\r\n</div>"
 
 /***/ }),
 
@@ -553,6 +557,10 @@ var LoginComponent = /** @class */ (function () {
             username: this.username,
             password: this.password
         };
+        var newu = {
+            username: this.username,
+            password: this.password
+        };
         this.authService.authenticateUser(user).subscribe(function (data) {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
@@ -564,12 +572,25 @@ var LoginComponent = /** @class */ (function () {
                 _this.router.navigate(['adminmain']);
             }
             else {
-                _this.flashMessage.showFlashMessage({
-                    messages: ['너 관리자 아니잖아ㅡㅡ'],
-                    type: 'danger',
-                    timeout: 3000
+                _this.authService.authenticateNewu(user).subscribe(function (data) {
+                    if (data.success) {
+                        _this.authService.storeNewuData(data.token, data.newu);
+                        _this.flashMessage.showFlashMessage({
+                            messages: ['환영합니다~'],
+                            type: 'success',
+                            timeout: 3000
+                        });
+                        _this.router.navigate(['usermain']);
+                    }
+                    else {
+                        _this.flashMessage.showFlashMessage({
+                            messages: ['다시 도전!'],
+                            type: 'danger',
+                            timeout: 3000
+                        });
+                        _this.router.navigate(['login']);
+                    }
                 });
-                _this.router.navigate(['login']);
             }
         });
     };
@@ -597,7 +618,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div{background: #f5d3d8; }"
+module.exports = "div{background: #f5d3d8; }\r\nli{\r\n    font-family: 'Courier New', Courier, cursive;\r\n    font-size: 20px;\r\n}"
 
 /***/ }),
 
@@ -1057,6 +1078,69 @@ var StorelistComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/usermain/usermain.component.css":
+/*!************************************************************!*\
+  !*** ./src/app/components/usermain/usermain.component.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/usermain/usermain.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/usermain/usermain.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  usermain works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/usermain/usermain.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/usermain/usermain.component.ts ***!
+  \***********************************************************/
+/*! exports provided: UsermainComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsermainComponent", function() { return UsermainComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UsermainComponent = /** @class */ (function () {
+    function UsermainComponent() {
+    }
+    UsermainComponent.prototype.ngOnInit = function () {
+    };
+    UsermainComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-usermain',
+            template: __webpack_require__(/*! ./usermain.component.html */ "./src/app/components/usermain/usermain.component.html"),
+            styles: [__webpack_require__(/*! ./usermain.component.css */ "./src/app/components/usermain/usermain.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UsermainComponent);
+    return UsermainComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/guards/auth.guard.ts":
 /*!**************************************!*\
   !*** ./src/app/guards/auth.guard.ts ***!
@@ -1197,6 +1281,12 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
+    };
+    AuthService.prototype.authenticateNewu = function (newu) {
+        var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('http://localhost:3000/newus/authenticate', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
