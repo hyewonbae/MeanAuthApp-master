@@ -113,12 +113,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/storelist/storelist.component */ "./src/app/components/storelist/storelist.component.ts");
 /* harmony import */ var _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/review/review.component */ "./src/app/components/review/review.component.ts");
 /* harmony import */ var _components_usermain_usermain_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/usermain/usermain.component */ "./src/app/components/usermain/usermain.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -178,7 +180,9 @@ var AppModule = /** @class */ (function () {
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(appRoutes),
                 ng_flash_messages__WEBPACK_IMPORTED_MODULE_14__["NgFlashMessagesModule"]
             ],
-            providers: [_services_validate_service__WEBPACK_IMPORTED_MODULE_12__["ValidateService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]],
+            providers: [_services_validate_service__WEBPACK_IMPORTED_MODULE_12__["ValidateService"], _services_auth_service__WEBPACK_IMPORTED_MODULE_13__["AuthService"], _guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"], {
+                    provide: _angular_common__WEBPACK_IMPORTED_MODULE_21__["LocationStrategy"], useClass: _angular_common__WEBPACK_IMPORTED_MODULE_21__["HashLocationStrategy"]
+                }],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -374,7 +378,7 @@ var AdminmainComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div{background:#ede9f5;}"
+module.exports = "div{background:#ede9f5;}\r\na:hover{\r\n    color:rebeccapurple;\r\n    background-color: rgb(255, 217, 217);\r\n}"
 
 /***/ }),
 
@@ -385,7 +389,7 @@ module.exports = "div{background:#ede9f5;}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" >\r\n<h3>\r\n음식점:\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> </h3><br>\r\n<h3>리뷰게시판: \r\n<a routerLink = \"/review\">review</a></h3>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:200px; vertical-align:middle\" >\r\n<h3>\r\n음식점 <span class=\"glyphicon glyphicon-arrow-right\"></span>\r\n<a routerLink = \"/storelist\"> storelist </a> &nbsp;\r\n<a routerLink = \"/addstore\"> addstore </a> </h3><br>\r\n<h3>리뷰게시판 <span class=\"glyphicon glyphicon-arrow-right\"></span>\r\n<a routerLink = \"/review\"> review</a></h3>\r\n</div>"
 
 /***/ }),
 
@@ -630,7 +634,7 @@ module.exports = "div{background: #f5d3d8; }\r\nli{\r\n    font-family: 'Courier
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK</a>\r\n            </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\">About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Management</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\">Userlist</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\">Register</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\">Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK</a> \r\n            </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/dashboard']\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            </li>\r\n            <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n                <a class=\"nav-link\" [routerLink]=\"['/profile']\"><span class=\"glyphicon glyphicon-list\"></span> Userlist</a>\r\n              </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 

@@ -1,1 +1,5 @@
 div{background:#ede9f5;}
+a:hover{
+    color:rebeccapurple;
+    background-color: rgb(255, 217, 217);
+}

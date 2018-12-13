@@ -21,7 +21,7 @@ import { AddstoreComponent } from './components/addstore/addstore.component';
 import { StorelistComponent } from './components/storelist/storelist.component';
 import { ReviewComponent } from './components/review/review.component';
 import { UsermainComponent } from './components/usermain/usermain.component';
-
+import {HashLocationStrategy , LocationStrategy } from '@angular/common'
 
 const appRoutes: Routes = [
   {path:'', component: HomeComponent},
@@ -58,7 +58,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     NgFlashMessagesModule
   ],
-  providers: [ValidateService, AuthService, AuthGuard],
+  providers: [ValidateService, AuthService, AuthGuard,{
+    provide: LocationStrategy, useClass: HashLocationStrategy
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
