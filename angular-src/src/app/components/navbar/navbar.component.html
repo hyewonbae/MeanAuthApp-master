@@ -7,8 +7,8 @@
     <div class="collapse navbar-collapse" id="navbarsExample04">
       <ul class="navbar-nav mr-auto">
           <li class="nav-item active" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" >
-              <a class="nav-link" [routerLink]="['/']">QUICLICK</a> 
-            </li>
+              <a class="nav-link" [routerLink]="['/']">QUICLICK<img src="https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png" style="width:30px"></a>
+          </li>
         <!-- <li class="nav-item active" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" >
           <a class="nav-link" [routerLink]="['/']" >Home</a>
         </li> -->
@@ -17,12 +17,15 @@
           <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
               <a class="nav-link" [routerLink]="['/adminmain']"><span class="glyphicon glyphicon-home"></span> About</a>
           </li>
-          <li *ngIf="authService.loggedIn()" class="nav-item"[routerLinkActive]="['active']" >
-              <a class="nav-link" [routerLink]="['/dashboard']"><span class="glyphicon glyphicon-cog"></span> Management</a>
+          <li *ngIf="authService.loggedIn()" class="nav-item dropdown"[routerLinkActive]="['active']" >
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Management</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item" [routerLink]="['/review']">Review</li>
+              <li class="dropdown-item" [routerLink]="['/addstore']">Addstore</li>
+              <li class="dropdown-item" [routerLink]="['/storelist']">Storelist</li>
+              <li class="dropdown-item" [routerLink]="['/profile']">Userlist</li>
+            </ul>
             </li>
-            <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
-                <a class="nav-link" [routerLink]="['/profile']"><span class="glyphicon glyphicon-list"></span> Userlist</a>
-              </li>
             <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']">
               <a class="nav-link"  [routerLink]="['/register']"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
             </li>
