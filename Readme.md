@@ -1,7 +1,6 @@
-# AWS에서 실행 방법
+# putty 서버 실행 
 ## 1. 사전준비
 1. [키페어 생성하기](./doc/create_keypair.pdf)
-1. [보안그룹 생성하기](./doc/create_security_group.pdf)
 2. [**AWS**에서 (Linux) 인스턴스 시작](./doc/launch_instance.md)
 3. [(Linux) 인스턴스 연결](./doc/connectingToInstance.pdf)
 
