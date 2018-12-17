@@ -928,7 +928,7 @@ module.exports = "th{\r\n    font-size:15px;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deletereviews()\">\r\n<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">No</th>\r\n        <th style=\"text-align: center\" width=\"25%\">음식점</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n        <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n        <th style=\"text-align: center\" width=\"10%\"><button type=\"submit\" span class=\"glyphicon glyphicon-trash\"></button> </th>\r\n      </tr>\r\n    </tbody>\r\n</table>\r\n    </form>\r\n    \r\n    \r\n     \r\n      "
+module.exports = "<table class=\"table table-striped\">\r\n  <thead>\r\n      <tr>\r\n        <th style=\"text-align: center\" width=\"15%\">No</th>\r\n        <th style=\"text-align: center\" width=\"25%\">음식점</th>\r\n        <th style=\"text-align: center\" width=\"60%\">내용</th>\r\n        <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n      \r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n     <tr class=\"reviews\" *ngFor=\"let review of reviews; let i =index\">\r\n        <th style=\"text-align: center\" width=\"15%\"> \r\n          <span class=\"badge\">{{i+1}}</span></th>\r\n        <th style=\"text-align: center\" width=\"25%\">{{review.name}}</th>\r\n        <th style=\"text-align: center\" width=\"60%\">{{review.des}}</th>\r\n        <th style=\"text-align: center\" width=\"10%\"><input type=\"button\" (click)=\"deletereviews(review)\" value=\"X\"></th>\r\n      </tr>\r\n    </tbody>\r\n</table>\r\n \r\n    \r\n    \r\n     \r\n      "
 
 /***/ }),
 
@@ -972,15 +972,18 @@ var ReviewComponent = /** @class */ (function () {
             return false;
         });
     };
-    ReviewComponent.prototype.deletereviews = function () {
-        var _this = this;
-        this.authService.deleteReview().subscribe(function (data) {
-            _this.reviews = data.review;
+    ReviewComponent.prototype.deletereviews = function (review) {
+        var reviews = {
+            name: review.name,
+            des: review.des
+        };
+        this.authService.deleteReview(reviews).subscribe(function (data) {
             console.log("성공");
         }, function (err) {
             console.log(err);
             return false;
         });
+        window.location.reload();
     };
     ReviewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1247,11 +1250,11 @@ var AuthService = /** @class */ (function () {
         return this.http.post('http://localhost:3000/newus/removeuser', users, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
-    AuthService.prototype.deleteReview = function () {
+    AuthService.prototype.deleteReview = function (reviews) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/reviews/deletereview', { headers: headers })
+        return this.http.post('http://localhost:3000/reviews/removereview', reviews, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteStore = function (stores) {

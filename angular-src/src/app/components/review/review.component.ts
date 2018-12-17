@@ -26,16 +26,20 @@ export class ReviewComponent implements OnInit {
       return false;
     })
   }
-  deletereviews(){
-    this.authService.deleteReview().subscribe(data =>
+  deletereviews(review){
+    const reviews={
+     
+      name:review.name,
+      des:review.des
+    }
+    this.authService.deleteReview(reviews).subscribe(data =>
       {
-         this.reviews = data.review; 
          console.log("성공");
         },
        err => { 
          console.log(err); 
         return false;
        });
+       window.location.reload();
     }
-
-}
+  }

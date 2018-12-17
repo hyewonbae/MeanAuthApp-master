@@ -56,11 +56,10 @@ res.json({review:review});
   });
  
 });
-router.get('/deletereview', (req, res, next) => { 
-
-  Review.deleteReview((err, review) => { 
-    if(err) {throw err;}
-    res.json({review:review});
+router.post('/removereview', (req, res, next) => { 
+  const name=req.body.name;
+  Review.remove(name,(err, name) => { 
+    res.json('success');
 
   });
 });
