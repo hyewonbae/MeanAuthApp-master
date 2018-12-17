@@ -1,3 +1,16 @@
+1) Angular 사전 준비
+ 1.Angular CLI 설치 : 프로젝트와 콤포넌트 생성에 이용됨.
+ > npm install -g @angular/cli
+ > ng --version
+ 2.해당 angula-src로 이동
+ ```
+PS C:\Users\배혜원\MeanAuthApp-master>cd.\angular-src\
+```
+ 3.Build: 배포를 하고 싶다면 빌드를 해줘야 함.
+```
+PS C:\Users\배혜원\MeanAuthApp-master>ng build
+```
+
 # putty 서버 실행 
 (이관우 교수님 readme 참고했습니다.)
 ## 1. 사전준비
