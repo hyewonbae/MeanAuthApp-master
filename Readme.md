@@ -12,7 +12,7 @@ PS C:\Users\배혜원\Quiclick>cd.\angular-src\
 ```
 3.기존에 미리 등록한 관리자용 로그인 정보
 
-Username: admin
+Username: admin 
 Password: 1
 
 4.Build: 배포를 하고 싶다면 빌드를 해줘야 함.
