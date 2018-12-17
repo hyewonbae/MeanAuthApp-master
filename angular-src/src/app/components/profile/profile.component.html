@@ -1,5 +1,4 @@
-<form (submit)="deleteusers()">
-    <div class="container">
+<div class="container">
       <h2>Userlist</h2>      
       <table class="table table-condensed" >
         <thead>
@@ -15,9 +14,8 @@
             <th style="text-align: center" width="10%">{{i+1}}</th>
             <th style="text-align: center" width="40%">{{user.name}}</th>
             <th style="text-align: center" width="40%">{{user.username}}</th>
-            <th style="text-align: center" width="10%"><button type="submit" span class="glyphicon glyphicon-trash"></button> </th>
+            <th style="text-align: center" width="10%"><input type="button" (click)="deleteusers(user)" value="X"> </th>
           </tr>
        </tbody>
        </table>
        </div>
-      </form>

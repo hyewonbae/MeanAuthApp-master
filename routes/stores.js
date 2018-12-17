@@ -69,6 +69,16 @@ router.post('/removestore', (req, res,next) => {
       res.json('success');
     });
   });
+
+  router.post('/count', function(req, res, next) {
+
+    const name = req.body.name;
+    const count = req.body.count+1;
+    
+    Store.change(name,count,(err, store) => {
+      res.json("Success");
+    });
+  });
 //==================================================>
 
 module.exports = router;

@@ -39,6 +39,10 @@ const StoreSchema = mongoose.Schema({
   },
   pic: {
     type: String
+  },
+  reserve: {
+    type: String,
+    required: true
   }
 });
 
@@ -49,7 +53,7 @@ module.exports.getStoreAll = function(id, callback){//////////////////////////ìš
     if (results) {
       
       Store.find(id,results);
-		}
+      }
   })
  
 }
@@ -93,6 +97,10 @@ module.exports.addStore = function(newStore, callback){
   
       newStore.save(callback);
     
+}
+module.exports.change = function(name, callback){
+  const query = {name: name}
+  Store.updateOne(query,{$set:{reserve:"false", count: count}},callback);
 }
 
 module.exports.comparePassword = function(candidatePassword, hash, callback){

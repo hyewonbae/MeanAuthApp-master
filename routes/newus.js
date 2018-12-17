@@ -35,15 +35,13 @@ res.json({user:user});
  
 });
 //==================================================>
-router.get('/deleteuser', (req, res, next) => { 
-
-  Newu.deleteUser((err, user) => { 
-    if(err) {throw err;}
-    res.json({user:user});
+router.post('/removeuser', (req, res, next) => { 
+  const name=req.body.name;
+  Newu.remove(name,(err, name) => { 
+    res.json('success');
 
   });
 });
-
 router.post('/authenticate', function(req, res, next) {
   const username = req.body.username;
   const password = req.body.password;

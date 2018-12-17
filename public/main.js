@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <ng-flash-message></ng-flash-message>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <ng-flash-message></ng-flash-message>\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -211,7 +211,7 @@ module.exports = "th{\r\n    font-size: 15px;\r\n    width:100px;\r\n}\r\n\r\ntd
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\" margin:0 auto; width:600px; height:300px; vertical-align:middle\">\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n            <tr>\r\n                <th>NAME </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU1</th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>CALL </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>ADDRESS </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>PICTURE </th>\r\n                <td><input type=\"file\" [(ngModel)]=\"pic\" name=\"pic\" class=\"form-control\" placeholder=\"Picture\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>COUNT </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"count\" name=\"count\" class=\"form-control\" placeholder=\"Count\"></td>\r\n            </tr>\r\n              \r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
+module.exports = "<div class=\"container\" style=\" margin:0 auto; width:600px; height:300px; vertical-align:middle\">\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n            <tr>\r\n                <th>NAME </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU1</th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>CALL </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>ADDRESS </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>PICTURE </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"pic\" name=\"pic\" class=\"form-control\" placeholder=\"Picture\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>COUNT </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"count\" name=\"count\" class=\"form-control\" placeholder=\"Count\"></td>\r\n            </tr>\r\n              \r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
 
 /***/ }),
 
@@ -515,7 +515,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b>Login</b></h2>\r\n<form (submit)=\"onLoginSubmit()\">\r\n  <div class=\"form-group\">\r\n   \r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\r\n</form>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b>Login</b></h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n   \n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\n</form>\n</div>"
 
 /***/ }),
 
@@ -719,7 +719,7 @@ module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deleteusers()\">\r\n    <div class=\"container\">\r\n      <h2>Userlist</h2>      \r\n      <table class=\"table table-condensed\" >\r\n        <thead>\r\n          <tr>\r\n            <th style=\"text-align: center\" width=\"10%\">No</th>\r\n            <th style=\"text-align: center\" width=\"40%\">ID</th>\r\n            <th style=\"text-align: center\" width=\"40%\">USERNAME</th>\r\n            <th style=\"text-align: center\" width=\"10%\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let user of users; let i=index\" style=\"text-align:center\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n            <th style=\"text-align: center\" width=\"10%\">{{i+1}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.name}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.username}}</th>\r\n            <th style=\"text-align: center\" width=\"10%\"><button type=\"submit\" span class=\"glyphicon glyphicon-trash\"></button> </th>\r\n          </tr>\r\n       </tbody>\r\n       </table>\r\n       </div>\r\n      </form>"
+module.exports = "<div class=\"container\">\r\n      <h2>Userlist</h2>      \r\n      <table class=\"table table-condensed\" >\r\n        <thead>\r\n          <tr>\r\n            <th style=\"text-align: center\" width=\"10%\">No</th>\r\n            <th style=\"text-align: center\" width=\"40%\">ID</th>\r\n            <th style=\"text-align: center\" width=\"40%\">USERNAME</th>\r\n            <th style=\"text-align: center\" width=\"10%\">Delete</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngFor=\"let user of users; let i=index\" style=\"text-align:center\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n            <th style=\"text-align: center\" width=\"10%\">{{i+1}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.name}}</th>\r\n            <th style=\"text-align: center\" width=\"40%\">{{user.username}}</th>\r\n            <th style=\"text-align: center\" width=\"10%\"><input type=\"button\" (click)=\"deleteusers(user)\" value=\"X\"> </th>\r\n          </tr>\r\n       </tbody>\r\n       </table>\r\n       </div>\r\n"
 
 /***/ }),
 
@@ -765,15 +765,18 @@ var ProfileComponent = /** @class */ (function () {
             return false;
         });
     };
-    ProfileComponent.prototype.deleteusers = function () {
-        var _this = this;
-        this.authService.deleteUser().subscribe(function (data) {
-            _this.users = data.user;
+    ProfileComponent.prototype.deleteusers = function (user) {
+        var users = {
+            name: user.name,
+            username: user.username
+        };
+        this.authService.deleteUser(users).subscribe(function (data) {
             console.log("성공");
         }, function (err) {
             console.log(err);
             return false;
         });
+        window.location.reload();
     };
     ProfileComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -809,7 +812,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b> Register </b></h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n    \r\n  <div class=\"form-group\" >\r\n  \r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\r\n  </div>\r\n  <div class=\"form-group\"> -->\r\n\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n  </div>\r\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n    \r\n</form>\r\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\n  </div>\n  <div class=\"form-group\"> -->\n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n    \n</form>\n</div>"
 
 /***/ }),
 
@@ -1013,7 +1016,7 @@ module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deletestores()\">\r\n\r\n<div class=\"container\">\r\n    <h2>Storelist</h2>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"20%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <input type=\"button\" (click)=deletestores(store) value=\"X\"> </th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div></form>"
+module.exports = "\r\n\r\n<div class=\"container\">\r\n    <h2>Storelist</h2>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"20%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <input type=\"button\" (click)=deletestores(store) value=\"X\"> </th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div>"
 
 /***/ }),
 
@@ -1109,7 +1112,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  usermain works!\n</p>\n"
+module.exports = "<p>\r\n  usermain works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -1237,11 +1240,11 @@ var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
     }
-    AuthService.prototype.deleteUser = function () {
+    AuthService.prototype.deleteUser = function (users) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/newus/deleteuser', { headers: headers })
+        return this.http.post('http://localhost:3000/newus/removeuser', users, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteReview = function () {
@@ -1469,7 +1472,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\SY\DatabaseExample\Quiclick\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\배혜원\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

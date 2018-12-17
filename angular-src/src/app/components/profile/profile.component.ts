@@ -27,15 +27,21 @@ export class ProfileComponent implements OnInit {
       return false;
     })
   }
-  deleteusers(){
-    this.authService.deleteUser().subscribe(data =>
-      {
-         this.users = data.user; 
-         console.log("성공");
-        },
-       err => { 
-         console.log(err); 
-        return false;
-       });
-    }
+  
+deleteusers(user){
+  const users={
+   
+    name:user.name,
+    username:user.username
+  }
+  this.authService.deleteUser(users).subscribe(data =>
+    {
+       console.log("성공");
+      },
+     err => { 
+       console.log(err); 
+      return false;
+     });
+     window.location.reload();
+  }
 }

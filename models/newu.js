@@ -58,12 +58,7 @@ module.exports.getUserAll = function(id, callback){
   })
  
 }
-module.exports.deleteUser=function(id,callback){
-  Newu.deleteOne({},function(err,results){
-        if(err) {throw err;}
-        if (results) {
-          console.log("유저삭제")
-          Newu.getUserAll(id,results);
-          }
-  })
+module.exports.remove=function(name,callback){
+  const query={name:name}
+  Newu.deleteOne(query,callback);
 }

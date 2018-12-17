@@ -15,11 +15,11 @@ export class AuthService {
 
   constructor(private http:Http) { }
   
-  deleteUser(){
+  deleteUser(users){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/newus/deleteuser', {headers: headers})
+    return this.http.post('http://localhost:3000/newus/removeuser',users, {headers: headers})
       .pipe(map(res => res.json()));
   } 
   deleteReview(){
