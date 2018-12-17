@@ -55,23 +55,32 @@ Install MongoDB Community Edition on Ubuntu
 	[ubuntu ~]$ sudo service mongod start
 	```
 
-## 4. APP 다운로드 및 실행
-1. GitHub 저장소에서 App 다운로드
-
+## 4. 실행
+1. putty 실행 후 Quiclick 폴더로 이동
 	```
-	[ubuntu ~]$ git clone https://github.com/kwanulee/NodeJSServer
-	```
-
-2. App 폴더로 이동
-
-	```
-	[ubuntu ~]$ cd NodeJSServer
+	[ubuntu ~]$ cd Quiclick
 	```
 
-3. App 실행
+2. 서버 실행
 
 	```
-	[ubuntu ~]$ sudo node app.js&
+	[ubuntu ~]$ npm start
 	```
 
-4. 서버가 정상적으로 실행되면, https://github.com/kwanulee/AndroidNodeJS 안드로이드 프로젝트를 다운받아 디바이스에 설치하고 실행해 본다.
+3. 백그라운드 실행 시 pm2 설치
+
+	```
+	[ubuntu ~]$ npm install -g pm2
+	```
+
+4. pm2 서버 실행
+
+	```
+	[ubuntu ~]$ pm2 start .bin/www
+	```
+	
+4. pm2 서버 종료시 코드
+
+	```
+	[ubuntu ~]$ pm2 stop .bin/www
+	```
