@@ -73,12 +73,24 @@ router.post('/removestore', (req, res,next) => {
   router.post('/count', function(req, res, next) {
 
     const name = req.body.name;
-    const count = req.body.count+1;
+    var count = req.body.count+1;
     
     Store.change(name,count,(err, store) => {
       res.json("Success");
     });
   });
+  router.post('/count', function(req, res, next) {
+    const name = req.body.name;
+    const count = req.body.count;
+    Store.findOneAndUpdate({name:name}, {$set: {count: count+1}},{new: true},function(err,result){
+        if(err) console.log(err);
+        else{ 
+          res.send({
+            success:200
+          })
+        }
+      });
+  })
 //==================================================>
 
 module.exports = router;

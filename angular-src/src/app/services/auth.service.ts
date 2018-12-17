@@ -14,7 +14,6 @@ export class AuthService {
   review: any;
 
   constructor(private http:Http) { }
-  
   deleteUser(users){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
@@ -94,7 +93,7 @@ authenticateNewu(newu) {
     localStorage.setItem('newu', JSON.stringify(newu));
     this.authToken = token;
     this.newu = newu;
-    console.log("서ㅓㅓ어공");
+    console.log("성공");
   }
 
   storeUserData(token, user) {
@@ -107,7 +106,7 @@ authenticateNewu(newu) {
   loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
-    console.log("서ㅓㅓDDDDDDDDDD어공");
+    console.log("성공");
   }
   loadUserToken() {
     const token = localStorage.getItem('idd_token');

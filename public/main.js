@@ -315,7 +315,7 @@ var AddstoreComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1{\r\n    font-family: 'Courier New', Courier, Gungsuh ;\r\n}\r\n"
+module.exports = "\r\nth{\r\n    font-size: 15px;\r\n}"
 
 /***/ }),
 
@@ -326,7 +326,7 @@ module.exports = "h1{\r\n    font-family: 'Courier New', Courier, Gungsuh ;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>이 곳은 관리자 페이지 입니다.</h1>"
+module.exports = "<h2>♥ 이번 주 맛집 랭킹 BEST5 ♥</h2>\r\n<div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 80% \" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\">BHC</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: 60%\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\">KFC</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-info\" role=\"progressbar\" style=\"width: 55%\" aria-valuenow=\"55\" aria-valuemin=\"0\" aria-valuemax=\"100\">MOM'S TOUCH</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-warning\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\">LOTTERIA</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-danger\" role=\"progressbar\" style=\"width: 10%\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\">STARBUCKS</div>\r\n  </div>\r\n  <br>\r\n  <h2>♥ 이번 달 등록한 회원 ♥</h2>\r\n  \r\n  <table class=\"table table-striped\">\r\n    <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\">No</th>\r\n          <th style=\"text-align: center\">Name</th>\r\n          <th style=\"text-align: center\">Username</th>\r\n          <th style=\"text-align: center\">등록일</th>\r\n        \r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n       <tr >\r\n          <th style=\"text-align: center\"> \r\n            <span class=\"badge\">1</span></th>\r\n          <th style=\"text-align: center\">혜원</th>\r\n          <th style=\"text-align: center\">워니</th>\r\n          <th style=\"text-align: center\">2018.12.02 10:00am</th>\r\n        </tr>\r\n        <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">2</span></th>\r\n            <th style=\"text-align: center\">세영</th>\r\n            <th style=\"text-align: center\">셍이</th>\r\n            <th style=\"text-align: center\">2018.12.06 5:30pm</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">3</span></th>\r\n            <th style=\"text-align: center\">경희</th>\r\n            <th style=\"text-align: center\" >갱이</th>\r\n            <th style=\"text-align: center\">2018.12.13 7:26am</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">4</span></th>\r\n            <th style=\"text-align: center\">민정</th>\r\n            <th style=\"text-align: center\">정이</th>\r\n            <th style=\"text-align: center\">2018.12.18 3:55pm</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">5</span></th>\r\n            <th style=\"text-align: center\">은솔</th>\r\n            <th style=\"text-align: center\">솔이</th>\r\n            <th style=\"text-align: center\">2018.12.18 8:24pm</th>\r\n          </tr>\r\n\r\n      </tbody>\r\n  </table>\r\n   \r\n      \r\n      \r\n       \r\n        "
 
 /***/ }),
 
@@ -452,7 +452,7 @@ module.exports = "div{background:#ede9f5;\r\n    text-align: center;}\r\n    a{\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"container\">\r\n    \r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n   \r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n   \r\n    <div class=\"carousel-inner\">\r\n\r\n      <div class=\"item active\">\r\n        <img src=\"http://img.etoday.co.kr/pto_db/2012/08/20120808074429_216169_500_364.jpg\"style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px; >\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img src=\"https://pds.joins.com/news/component/htmlphoto_mmdata/201701/16/htm_2017011613284392799.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n      </div>\r\n    \r\n      <div class=\"item\">\r\n        <img src=\"https://www.myhawaii.kr/wp-content/uploads/2015/04/2dc1a9dcdd7996157df35053c53f5b12.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n\r\n      </div>\r\n  \r\n    </div>\r\n\r\n   \r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n<br>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h2>COMPANY INFO</h2>\r\n          <h4>company:(주)quiclick</h4>\r\n          <h4>Email:BSJ@hansung.ac.kr</h4>\r\n          <h4>Address:서울특별시 성북구 삼선교로 16길 116</h4>\r\n          <h4>TEL:02-1234-5678</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>QUICLICK</h2>\r\n          <h3>We offer you the best restaurant reservation service :)</h3>\r\n          <h3>We will always strive for better service.</h3>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h2>App</h2>\r\n          <h3>Quiclick App</h3><img width=\"30\" src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\">\r\n        </div>\r\n      </div>\r\n</div>"
+module.exports = "\r\n<div class=\"container\">\r\n    \r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n   \r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n   \r\n    <div class=\"carousel-inner\">\r\n\r\n      <div class=\"item active\">\r\n        <img src=\"http://img.etoday.co.kr/pto_db/2012/08/20120808074429_216169_500_364.jpg\"style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px; >\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img src=\"https://pds.joins.com/news/component/htmlphoto_mmdata/201701/16/htm_2017011613284392799.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n      </div>\r\n    \r\n      <div class=\"item\">\r\n        <img src=\"https://www.myhawaii.kr/wp-content/uploads/2015/04/2dc1a9dcdd7996157df35053c53f5b12.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n\r\n      </div>\r\n  \r\n    </div>\r\n\r\n   \r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n<br>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h3>COMPANY INFO</h3>\r\n          <h4>company:(주)quiclick</h4>\r\n          <h4>Email:BSJ@hansung.ac.kr</h4>\r\n          <h4>Address:서울특별시 성북구 삼선교로 16길 116</h4>\r\n          <h4>TEL:02-1234-5678</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h3>QUICLICK</h3>\r\n          <h4>We offer you the best restaurant reservation service :)</h4>\r\n          <h4>We will always strive for better service.</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h3>App</h3>\r\n          <h4>Quiclick App</h4><img width=\"30\" src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\">\r\n        </div>\r\n      </div>\r\n</div>"
 
 /***/ }),
 
@@ -570,7 +570,7 @@ var LoginComponent = /** @class */ (function () {
             if (data.success) {
                 _this.authService.storeUserData(data.token, data.user);
                 _this.flashMessage.showFlashMessage({
-                    messages: ['관리자 맞구나~~?'],
+                    messages: ['관리자님 환영합니다~'],
                     type: 'success',
                     timeout: 3000
                 });
@@ -581,7 +581,7 @@ var LoginComponent = /** @class */ (function () {
                     if (data.success) {
                         _this.authService.storeNewuData(data.token, data.newu);
                         _this.flashMessage.showFlashMessage({
-                            messages: ['환영합니다~'],
+                            messages: ['로그인 성공!'],
                             type: 'success',
                             timeout: 3000
                         });
@@ -589,7 +589,7 @@ var LoginComponent = /** @class */ (function () {
                     }
                     else {
                         _this.flashMessage.showFlashMessage({
-                            messages: ['다시 도전!'],
+                            messages: ['빈 칸을 다 채우십시오'],
                             type: 'danger',
                             timeout: 3000
                         });
@@ -623,7 +623,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div{background: #f5d3d8; }\r\nli{\r\n    font-family: 'Courier New', Courier, cursive;\r\n    font-size: 20px;\r\n}"
+module.exports = "div{background: #e2dcdd; }\r\nli{\r\n    font-family: 'Courier New', Courier, cursive;\r\n    font-size: 20px;\r\n}"
 
 /***/ }),
 
@@ -677,7 +677,7 @@ var NavbarComponent = /** @class */ (function () {
     NavbarComponent.prototype.onLogoutClick = function () {
         this.authService.logout();
         this.flashMessage.showFlashMessage({
-            messages: ['가지마아ㅏ아앙ㅇ~~~~~'],
+            messages: ['로그아웃!'],
             type: 'success',
             timeout: 3000
         });
@@ -812,7 +812,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\n  </div>\n  <div class=\"form-group\"> -->\n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n    \n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-secondary\" value=\"Submit\">\n    \n</form>\n</div>"
 
 /***/ }),
 
@@ -865,7 +865,7 @@ var RegisterComponent = /** @class */ (function () {
         };
         // Required Fields
         if (!this.validateService.validateRegister(newu)) {
-            this.flashMessage.showFlashMessage({ messages: ['Please fill in all fields'], type: 'danger', timeout: 2000 });
+            this.flashMessage.showFlashMessage({ messages: ['빈 칸을 다 채우십시오.'], type: 'danger', timeout: 2000 });
             return false;
         }
         // Validate Email
@@ -877,14 +877,14 @@ var RegisterComponent = /** @class */ (function () {
         this.authService.registerNewu(newu).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.showFlashMessage({
-                    messages: ['환영해~~앱에서 확인해보쇼!'],
+                    messages: ['가입완료!'],
                     type: 'success',
                     timeout: 5000
                 });
                 _this.router.navigate(['/']);
             }
             else {
-                _this.flashMessage.showFlashMessage({ messages: ['뭔가 잘못됐어 ㅠㅠ'],
+                _this.flashMessage.showFlashMessage({ messages: ['다시 입력해주세요.'],
                     type: 'danger',
                     timeout: 3000
                 });
@@ -1115,7 +1115,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  usermain works!\r\n</p>\r\n"
+module.exports = "<h2>나의 정보</h2>\r\n"
 
 /***/ }),
 
@@ -1247,72 +1247,72 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/newus/removeuser', users, { headers: headers })
+        return this.http.post('http://localhost:3000/newus/removeuser', users, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteReview = function (reviews) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/reviews/removereview', reviews, { headers: headers })
+        return this.http.post('http://localhost:3000/reviews/removereview', reviews, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteStore = function (stores) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/stores/removestore', stores, { headers: headers })
+        return this.http.post('http://localhost:3000/stores/removestore', stores, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getStore = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/stores/storelist', { headers: headers })
+        return this.http.get('http://localhost:3000/stores/storelist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getReview = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', { headers: headers })
+        return this.http.get('http://localhost:3000/reviews/reviewlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.registerNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/newus/register', newu, { headers: headers })
+        return this.http.post('http://localhost:3000/newus/register', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.addStore = function (store) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/stores/addstore', store, { headers: headers })
+        return this.http.post('http://localhost:3000/stores/addstore', store, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.addReview = function (review) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/reviews/addreview', review, { headers: headers })
+        return this.http.post('http://localhost:3000/reviews/addreview', review, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/users/authenticate', user, { headers: headers })
+        return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://13.209.244.98:3000/newus/authenticate', newu, { headers: headers })
+        return this.http.post('http://localhost:3000/newus/authenticate', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://13.209.244.98:3000/newus/userlist', { headers: headers })
+        return this.http.get('http://localhost:3000/newus/userlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {
@@ -1320,7 +1320,7 @@ var AuthService = /** @class */ (function () {
         localStorage.setItem('newu', JSON.stringify(newu));
         this.authToken = token;
         this.newu = newu;
-        console.log("서ㅓㅓ어공");
+        console.log("성공");
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('id_token', token);
@@ -1331,7 +1331,7 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
         this.authToken = token;
-        console.log("서ㅓㅓDDDDDDDDDD어공");
+        console.log("성공");
     };
     AuthService.prototype.loadUserToken = function () {
         var token = localStorage.getItem('idd_token');

@@ -39,10 +39,6 @@ const StoreSchema = mongoose.Schema({
   },
   pic: {
     type: String
-  },
-  reserve: {
-    type: String,
-    required: true
   }
 });
 
