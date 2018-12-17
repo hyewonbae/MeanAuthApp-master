@@ -1,2 +1,2 @@
-# MeanAuthApp
-Mean stack Authentication App
+# 선별된 맛집 예약! Quiclick! 
+
