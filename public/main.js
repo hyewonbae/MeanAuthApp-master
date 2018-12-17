@@ -634,7 +634,7 @@ module.exports = "div{background: #f5d3d8; }\r\nli{\r\n    font-family: 'Courier
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK<img src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\" style=\"width:30px\"></a>\r\n          </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()&& !authService.loggedUser()\" class=\"nav-item dropdown\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/review']\">Review</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/addstore']\">Addstore</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/storelist']\">Storelist</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/profile']\">Userlist</li>\r\n            </ul>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n            <a class=\"nav-link\" id=\"mini\" [routerLink]=\"['/usermain']\">User</a>\r\n        </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser() \" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n          \r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK<img src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\" style=\"width:30px\"></a>\r\n          </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()&& !authService.loggedUser()\" class=\"nav-item dropdown\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/review']\">Review</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/addstore']\">Addstore</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/storelist']\">Storelist</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/profile']\">Userlist</li>\r\n            </ul>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n            <a class=\"nav-link\" [routerLink]=\"['/usermain']\"> <span class=\"glyphicon glyphicon-user\"></span> User</a>\r\n        </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser() \" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n          \r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -1247,72 +1247,72 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/newus/removeuser', users, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/newus/removeuser', users, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteReview = function (reviews) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/reviews/removereview', reviews, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/reviews/removereview', reviews, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteStore = function (stores) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/stores/removestore', stores, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/stores/removestore', stores, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getStore = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/stores/storelist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/stores/storelist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getReview = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/reviews/reviewlist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.registerNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/newus/register', newu, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/newus/register', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.addStore = function (store) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/stores/addstore', store, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/stores/addstore', store, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.addReview = function (review) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/reviews/addreview', review, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/reviews/addreview', review, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/newus/authenticate', newu, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/newus/authenticate', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/newus/userlist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/newus/userlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {

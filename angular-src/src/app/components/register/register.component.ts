@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit {
 
   // Required Fields
     if(!this.validateService.validateRegister(newu)) {
-      this.flashMessage.showFlashMessage({messages: ['Please fill in all fields'], type: 'danger', timeout:2000});
+      this.flashMessage.showFlashMessage({messages: ['빈 칸을 다 채우십시오.'], type: 'danger', timeout:2000});
       return false;
     }
 
@@ -49,14 +49,14 @@ export class RegisterComponent implements OnInit {
     this.authService.registerNewu(newu).subscribe(data => {
       if(data.success) {
         this.flashMessage.showFlashMessage({
-          messages: ['환영해~~앱에서 확인해보쇼!'], 
+          messages: ['가입완료!'], 
           type: 'success', 
           timeout:5000
         });
         this.router.navigate(['/']);
       } else {
         this.flashMessage.showFlashMessage(
-          {messages: ['뭔가 잘못됐어 ㅠㅠ'], 
+          {messages: ['다시 입력해주세요.'], 
           type: 'danger', 
           timeout:3000
         });

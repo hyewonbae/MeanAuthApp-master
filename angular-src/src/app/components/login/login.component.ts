@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       if(data.success) {
         this.authService.storeUserData(data.token, data.user);
         this.flashMessage.showFlashMessage({
-          messages: ['관리자 맞구나~~?'], 
+          messages: ['관리자님 환영합니다~'], 
           type: 'success', 
           timeout:3000
         });
@@ -45,14 +45,14 @@ export class LoginComponent implements OnInit {
           if(data.success) {
             this.authService.storeNewuData(data.token, data.newu);
             this.flashMessage.showFlashMessage({
-              messages: ['환영합니다~'], 
+              messages: ['로그인 성공!'], 
               type: 'success', 
               timeout:3000
             });
             this.router.navigate(['usermain']);
           } else {
             this.flashMessage.showFlashMessage({
-                messages: ['다시 도전!'], 
+                messages: ['빈 칸을 다 채우십시오'], 
                 type: 'danger', 
                 timeout:3000
               });
