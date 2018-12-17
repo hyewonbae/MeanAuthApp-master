@@ -1,4 +1,5 @@
 # putty 서버 실행 
+(이관우 교수님 readme 참고했습니다.)
 ## 1. 사전준비
 1. [키페어 생성하기](./doc/create_keypair.pdf)
 2. [**AWS**에서 (Linux) 인스턴스 시작](./doc/launch_instance.md)
