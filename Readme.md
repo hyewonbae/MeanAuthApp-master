@@ -17,6 +17,7 @@ Password: 1
 ```
 PS C:\Users\배혜원\Quiclick>ng build
 ```
+
 # putty 서버 실행 
 (이관우 교수님 readme 참고했습니다.)
 ## 1. 사전준비
