@@ -11,6 +11,7 @@ PS C:\Users\배혜원\Quiclick> ng --version
 PS C:\Users\배혜원\Quiclick>cd.\angular-src\
 ```
 3.기존에 미리 등록한 관리자용 로그인 정보
+
 Username: admin
 Password: 1
 
