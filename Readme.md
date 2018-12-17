@@ -6,7 +6,7 @@ PS C:\Users\배혜원\Quiclick> npm install -g @angular/cli
 ```
 PS C:\Users\배혜원\Quiclick> ng --version
 ```
-2.해당 angula-src로 이동
+2.해당 angular-src로 이동
  ```
 PS C:\Users\배혜원\Quiclick>cd.\angular-src\
 ```
