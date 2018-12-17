@@ -14,10 +14,10 @@
         </li> -->
       </ul>
       <ul class="navbar-nav navbar-right" >
-          <li *ngIf="authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
+          <li *ngIf="authService.loggedIn() && !authService.loggedUser()" class="nav-item" [routerLinkActive]="['active']" >
               <a class="nav-link" [routerLink]="['/adminmain']"><span class="glyphicon glyphicon-home"></span> About</a>
           </li>
-          <li *ngIf="authService.loggedIn()" class="nav-item dropdown"[routerLinkActive]="['active']" >
+          <li *ngIf="authService.loggedIn()&& !authService.loggedUser()" class="nav-item dropdown"[routerLinkActive]="['active']" >
               <a class="nav-link dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> Management</a>
             <ul class="dropdown-menu">
               <li class="dropdown-item" [routerLink]="['/review']">Review</li>
@@ -25,13 +25,17 @@
               <li class="dropdown-item" [routerLink]="['/storelist']">Storelist</li>
               <li class="dropdown-item" [routerLink]="['/profile']">Userlist</li>
             </ul>
-            </li>
-            <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']">
+          </li>
+          <li *ngIf="authService.loggedUser()" class="nav-item" [routerLinkActive]="['active']" >
+            <a class="nav-link" id="mini" [routerLink]="['/usermain']">User</a>
+        </li>
+            <li *ngIf="!authService.loggedIn() && !authService.loggedUser() " class="nav-item" [routerLinkActive]="['active']">
               <a class="nav-link"  [routerLink]="['/register']"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
             </li>
-            <li *ngIf="!authService.loggedIn()" class="nav-item" [routerLinkActive]="['active']" >
+            <li *ngIf="!authService.loggedIn() && !authService.loggedUser()" class="nav-item" [routerLinkActive]="['active']" >
               <a class="nav-link" [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a>
             </li>
+          
             <li class="nav-item">
               <a class="nav-link" (click)="onLogoutClick()" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
             </li>

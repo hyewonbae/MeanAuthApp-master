@@ -63,14 +63,12 @@ res.json({store:store});
   });
  
 });
-router.get('/deletestore', (req, res, next) => { 
-
-  Store.deleteStore((err, store) => { 
-    if(err) {throw err;}
-    res.json({store:store});
-
+router.post('/removestore', (req, res,next) => { 
+  const name = req.body.name;
+    Store.remove(name,(err, name) => { 
+      res.json('success');
+    });
   });
-});
 //==================================================>
 
 module.exports = router;

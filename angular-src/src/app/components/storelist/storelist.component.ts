@@ -27,15 +27,25 @@ export class StorelistComponent implements OnInit {
       return false;
     })
   }
-  deletestores(){
-    this.authService.deleteStore().subscribe(data =>
+  deletestores(store){
+    const stores={
+      name:store.name,
+      des1:store.des1,
+      des2:store.des2,
+      des3:store.des3, 
+      call:store.call,
+      add:store.add,
+      count:store.count,
+    }
+    this.authService.deleteStore(stores).subscribe(data =>
       {
-         this.stores = data.store; 
          console.log("성공");
         },
        err => { 
          console.log(err); 
         return false;
        });
+       window.location.reload();
     }
+
 }

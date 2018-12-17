@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <ng-flash-message></ng-flash-message>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <ng-flash-message></ng-flash-message>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -152,7 +152,7 @@ var appRoutes = [
     { path: 'addstore', component: _components_addstore_addstore_component__WEBPACK_IMPORTED_MODULE_17__["AddstoreComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'storelist', component: _components_storelist_storelist_component__WEBPACK_IMPORTED_MODULE_18__["StorelistComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
     { path: 'review', component: _components_review_review_component__WEBPACK_IMPORTED_MODULE_19__["ReviewComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] },
-    { path: 'usermain', component: _components_usermain_usermain_component__WEBPACK_IMPORTED_MODULE_20__["UsermainComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_15__["AuthGuard"]] }
+    { path: 'usermain', component: _components_usermain_usermain_component__WEBPACK_IMPORTED_MODULE_20__["UsermainComponent"] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -515,7 +515,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b>Login</b></h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n   \n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b>Login</b></h2>\r\n<form (submit)=\"onLoginSubmit()\">\r\n  <div class=\"form-group\">\r\n   \r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\r\n</form>\r\n</div>"
 
 /***/ }),
 
@@ -577,7 +577,7 @@ var LoginComponent = /** @class */ (function () {
                 _this.router.navigate(['adminmain']);
             }
             else {
-                _this.authService.authenticateNewu(user).subscribe(function (data) {
+                _this.authService.authenticateNewu(newu).subscribe(function (data) {
                     if (data.success) {
                         _this.authService.storeNewuData(data.token, data.newu);
                         _this.flashMessage.showFlashMessage({
@@ -634,7 +634,7 @@ module.exports = "div{background: #f5d3d8; }\r\nli{\r\n    font-family: 'Courier
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK<img src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\" style=\"width:30px\"></a>\r\n          </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()\" class=\"nav-item dropdown\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/review']\">Review</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/addstore']\">Addstore</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/storelist']\">Storelist</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/profile']\">Userlist</li>\r\n            </ul>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK<img src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\" style=\"width:30px\"></a>\r\n          </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()&& !authService.loggedUser()\" class=\"nav-item dropdown\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/review']\">Review</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/addstore']\">Addstore</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/storelist']\">Storelist</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/profile']\">Userlist</li>\r\n            </ul>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n            <a class=\"nav-link\" id=\"mini\" [routerLink]=\"['/usermain']\">User</a>\r\n        </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser() \" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n          \r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -809,7 +809,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\n  </div>\n  <div class=\"form-group\"> -->\n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n    \n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:400px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b> Register </b></h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n    \r\n  <div class=\"form-group\" >\r\n  \r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <!-- <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" placeholder=\"Email\">\r\n  </div>\r\n  <div class=\"form-group\"> -->\r\n\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n  </div>\r\n    <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n    \r\n</form>\r\n</div>"
 
 /***/ }),
 
@@ -1013,7 +1013,7 @@ module.exports = "table {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form (submit)=\"deletestores()\">\r\n\r\n<div class=\"container\">\r\n    <h2>Storelist</h2>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"20%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <button type=\"submit\" span class=\"glyphicon glyphicon-trash\"></button> </th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div></form>"
+module.exports = "<form (submit)=\"deletestores()\">\r\n\r\n<div class=\"container\">\r\n    <h2>Storelist</h2>      \r\n    <table class=\"table table-condensed\" >\r\n      <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\" width=\"20%\">음식점</th>\r\n          <th style=\"text-align: center\" width=\"50%\">대표메뉴</th>\r\n          <th style=\"text-align: center\" width=\"10%\">전화</th>\r\n          <th style=\"text-align: center\" width=\"10%\">주소</th>\r\n          <th style=\"text-align: center\" width=\"20%\">대기자수</th>\r\n          <th style=\"text-align: center\" width=\"10%\">삭제</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr *ngFor=\"let store of stores;\" onMouseOver=\"this.className='bg1'\" onMouseOut=\"this.className='bg2'\">\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.name}}</th>\r\n          <th style=\"text-align: center\" width=\"50%\">{{store.des1}},{{store.des2}},{{store.des3}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.call}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\">{{store.add}}</th>\r\n          <th style=\"text-align: center\" width=\"20%\">{{store.count}}</th>\r\n          <th style=\"text-align: center\" width=\"10%\"> <input type=\"button\" (click)=deletestores(store) value=\"X\"> </th>\r\n      \r\n        </tr>\r\n     </tbody>\r\n     </table>\r\n     </div></form>"
 
 /***/ }),
 
@@ -1057,15 +1057,23 @@ var StorelistComponent = /** @class */ (function () {
             return false;
         });
     };
-    StorelistComponent.prototype.deletestores = function () {
-        var _this = this;
-        this.authService.deleteStore().subscribe(function (data) {
-            _this.stores = data.store;
+    StorelistComponent.prototype.deletestores = function (store) {
+        var stores = {
+            name: store.name,
+            des1: store.des1,
+            des2: store.des2,
+            des3: store.des3,
+            call: store.call,
+            add: store.add,
+            count: store.count,
+        };
+        this.authService.deleteStore(stores).subscribe(function (data) {
             console.log("성공");
         }, function (err) {
             console.log(err);
             return false;
         });
+        window.location.reload();
     };
     StorelistComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1101,7 +1109,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  usermain works!\r\n</p>\r\n"
+module.exports = "<p>\n  usermain works!\n</p>\n"
 
 /***/ }),
 
@@ -1243,11 +1251,11 @@ var AuthService = /** @class */ (function () {
         return this.http.get('http://localhost:3000/reviews/deletereview', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
-    AuthService.prototype.deleteStore = function () {
+    AuthService.prototype.deleteStore = function (stores) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/stores/deletestore', { headers: headers })
+        return this.http.post('http://localhost:3000/stores/removestore', stores, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getStore = function () {
@@ -1302,10 +1310,11 @@ var AuthService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {
-        localStorage.setItem('id_token', token);
+        localStorage.setItem('idd_token', token);
         localStorage.setItem('newu', JSON.stringify(newu));
         this.authToken = token;
         this.newu = newu;
+        console.log("서ㅓㅓ어공");
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('id_token', token);
@@ -1316,6 +1325,14 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
         this.authToken = token;
+        console.log("서ㅓㅓDDDDDDDDDD어공");
+    };
+    AuthService.prototype.loadUserToken = function () {
+        var token = localStorage.getItem('idd_token');
+        this.authToken = token;
+    };
+    AuthService.prototype.loggedUser = function () {
+        return Object(angular2_jwt__WEBPACK_IMPORTED_MODULE_3__["tokenNotExpired"])('idd_token');
     };
     AuthService.prototype.loggedIn = function () {
         return Object(angular2_jwt__WEBPACK_IMPORTED_MODULE_3__["tokenNotExpired"])('id_token');
@@ -1452,7 +1469,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\배혜원\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\SY\DatabaseExample\Quiclick\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

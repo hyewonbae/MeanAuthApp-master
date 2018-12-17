@@ -33,7 +33,7 @@ const appRoutes: Routes = [
   {path:'addstore', component: AddstoreComponent, canActivate:[AuthGuard]},
   {path:'storelist', component: StorelistComponent, canActivate:[AuthGuard]},
   {path:'review', component: ReviewComponent, canActivate:[AuthGuard]},
-  {path:'usermain', component: UsermainComponent, canActivate:[AuthGuard]}
+  {path:'usermain', component: UsermainComponent}
 ]
 
 @NgModule({

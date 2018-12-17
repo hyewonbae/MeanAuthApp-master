@@ -29,11 +29,11 @@ export class AuthService {
     return this.http.get('http://localhost:3000/reviews/deletereview', {headers: headers})
       .pipe(map(res => res.json()));
   }
-  deleteStore(){
+  deleteStore(stores){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/stores/deletestore', {headers: headers})
+    return this.http.post('http://localhost:3000/stores/removestore',stores,{headers: headers})
       .pipe(map(res => res.json()));
   }
   getStore() {   /////////////////////요부분
@@ -90,10 +90,11 @@ authenticateNewu(newu) {
   }
 
   storeNewuData(token, newu) {
-    localStorage.setItem('id_token', token);
+    localStorage.setItem('idd_token', token);
     localStorage.setItem('newu', JSON.stringify(newu));
     this.authToken = token;
     this.newu = newu;
+    console.log("서ㅓㅓ어공");
   }
 
   storeUserData(token, user) {
@@ -102,10 +103,20 @@ authenticateNewu(newu) {
     this.authToken = token;
     this.user = user;
   }
+  
   loadToken() {
     const token = localStorage.getItem('id_token');
     this.authToken = token;
+    console.log("서ㅓㅓDDDDDDDDDD어공");
   }
+  loadUserToken() {
+    const token = localStorage.getItem('idd_token');
+    this.authToken = token;
+  }
+  loggedUser() {
+    return tokenNotExpired('idd_token');
+    
+   }
 
    loggedIn() {
     return tokenNotExpired('id_token');
@@ -114,6 +125,7 @@ authenticateNewu(newu) {
   logout() {
     this.authToken = null;
     this.user = null;
+    
     localStorage.clear();
   }
   

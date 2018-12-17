@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         });
         this.router.navigate(['adminmain']);
       } else{
-        this.authService.authenticateNewu(user).subscribe(data => {
+        this.authService.authenticateNewu(newu).subscribe(data => {
           if(data.success) {
             this.authService.storeNewuData(data.token, data.newu);
             this.flashMessage.showFlashMessage({
