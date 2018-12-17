@@ -6,7 +6,7 @@ PS C:\Users\배혜원\MeanAuthApp-master> npm install -g @angular/cli
 ```
 PS C:\Users\배혜원\MeanAuthApp-master> ng --version
 ```
- 2.해당 angula-src로 이동
+2.해당 angula-src로 이동
  ```
 PS C:\Users\배혜원\MeanAuthApp-master>cd.\angular-src\
 ```
