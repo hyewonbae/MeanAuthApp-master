@@ -1,10 +1,10 @@
 ## Angular 사전 준비
 1.Angular CLI 설치 : 프로젝트와 콤포넌트 생성에 이용됨.
 ```
-PS C:\Users\배혜원\MeanAuthApp-master> npm install -g @angular/cli
+PS C:\Users\배혜원\Quiclick> npm install -g @angular/cli
 ```
 ```
-PS C:\Users\배혜원\MeanAuthApp-master> ng --version
+PS C:\Users\배혜원\Quiclick> ng --version
 ```
 2.해당 angula-src로 이동
  ```
