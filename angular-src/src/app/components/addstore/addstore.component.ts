@@ -49,7 +49,7 @@ export class AddstoreComponent implements OnInit {
     this.authService.addStore(store).subscribe(data => {
       if(data.success) {
         this.flashMessage.showFlashMessage({
-          messages: ['You are now added and check in your app! '], 
+          messages: ['맛집 추가 완료!'], 
           type: 'success', 
           timeout:5000
         });

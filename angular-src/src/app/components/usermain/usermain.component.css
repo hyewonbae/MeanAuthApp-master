@@ -1,0 +1,17 @@
+.myImage {
+    text-align: center;
+    float: left;
+    height: 300px;
+    width: 335px;
+    font-family: Veranda;
+    margin-right: 20px;
+    margin-left: 100px;
+    margin-top: 60px;
+    clear: both;
+  }
+  .heading {
+    
+  }
+  h1{
+      text-emphasis-color: #a540a0
+  }

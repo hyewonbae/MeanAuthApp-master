@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<app-navbar></app-navbar>\n<div class=\"container\">\n  <ng-flash-message></ng-flash-message>\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<app-navbar></app-navbar>\r\n<div class=\"container\">\r\n  <ng-flash-message></ng-flash-message>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -211,7 +211,7 @@ module.exports = "th{\r\n    font-size: 15px;\r\n    width:100px;\r\n}\r\n\r\ntd
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\" margin:0 auto; width:600px; height:300px; vertical-align:middle\">\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n            <tr>\r\n                <th>NAME </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU1</th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>CALL </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>ADDRESS </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>PICTURE </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"pic\" name=\"pic\" class=\"form-control\" placeholder=\"Picture\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>COUNT </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"count\" name=\"count\" class=\"form-control\" placeholder=\"Count\"></td>\r\n            </tr>\r\n              \r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\r\n  </form>\r\n  </div>"
+module.exports = "<div class=\"container\" style=\" margin:0 auto; width:600px; height:300px; vertical-align:middle\">\r\n    <h2 class=\"page-header\"> AddStores </h2>\r\n    <form (submit)=\"onAddStoreSubmit()\">\r\n  <table class=\"table table-bordered\">\r\n            <tr>\r\n                <th>NAME </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"Name\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU1</th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des1\" name=\"des1\"  class=\"form-control\" placeholder=\"Menu1\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU2 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des2\" name=\"des2\"  class=\"form-control\" placeholder=\"Menu2\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>MENU3 </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"des3\" name=\"des3\"  class=\"form-control\" placeholder=\"Menu3\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>CALL </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"call\" name=\"call\" class=\"form-control\" placeholder=\"PhoneNumber\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>ADDRESS </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"add\" name=\"add\" class=\"form-control\" placeholder=\"Address\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>PICTURE </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"pic\" name=\"pic\" class=\"form-control\" placeholder=\"Picture\"></td>\r\n            </tr>\r\n            <tr>\r\n                <th>COUNT </th>\r\n                <td><input type=\"text\" [(ngModel)]=\"count\" name=\"count\" class=\"form-control\" placeholder=\"Count\"></td>\r\n            </tr>\r\n              \r\n            </table>\r\n                      <input type=\"submit\" class=\"btn btn-secondary\" value=\"Submit\" style=\"float:right\">\r\n  </form>\r\n  </div>"
 
 /***/ }),
 
@@ -275,7 +275,7 @@ var AddstoreComponent = /** @class */ (function () {
         this.authService.addStore(store).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.showFlashMessage({
-                    messages: ['You are now added and check in your app! '],
+                    messages: ['맛집 추가 완료!'],
                     type: 'success',
                     timeout: 5000
                 });
@@ -326,7 +326,7 @@ module.exports = "\r\nth{\r\n    font-size: 15px;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>♥ 이번 주 맛집 랭킹 BEST5 ♥</h2>\r\n<div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 80% \" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\">BHC</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: 60%\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\">KFC</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-info\" role=\"progressbar\" style=\"width: 55%\" aria-valuenow=\"55\" aria-valuemin=\"0\" aria-valuemax=\"100\">MOM'S TOUCH</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-warning\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\">LOTTERIA</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-danger\" role=\"progressbar\" style=\"width: 10%\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\">STARBUCKS</div>\r\n  </div>\r\n  <br>\r\n  <h2>♥ 이번 달 등록한 회원 ♥</h2>\r\n  \r\n  <table class=\"table table-striped\">\r\n    <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\">No</th>\r\n          <th style=\"text-align: center\">Name</th>\r\n          <th style=\"text-align: center\">Username</th>\r\n          <th style=\"text-align: center\">등록일</th>\r\n        \r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n       <tr >\r\n          <th style=\"text-align: center\"> \r\n            <span class=\"badge\">1</span></th>\r\n          <th style=\"text-align: center\">혜원</th>\r\n          <th style=\"text-align: center\">워니</th>\r\n          <th style=\"text-align: center\">2018.12.02 10:00am</th>\r\n        </tr>\r\n        <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">2</span></th>\r\n            <th style=\"text-align: center\">세영</th>\r\n            <th style=\"text-align: center\">셍이</th>\r\n            <th style=\"text-align: center\">2018.12.06 5:30pm</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">3</span></th>\r\n            <th style=\"text-align: center\">경희</th>\r\n            <th style=\"text-align: center\" >갱이</th>\r\n            <th style=\"text-align: center\">2018.12.13 7:26am</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">4</span></th>\r\n            <th style=\"text-align: center\">민정</th>\r\n            <th style=\"text-align: center\">정이</th>\r\n            <th style=\"text-align: center\">2018.12.18 3:55pm</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">5</span></th>\r\n            <th style=\"text-align: center\">은솔</th>\r\n            <th style=\"text-align: center\">솔이</th>\r\n            <th style=\"text-align: center\">2018.12.18 8:24pm</th>\r\n          </tr>\r\n\r\n      </tbody>\r\n  </table>\r\n   \r\n      \r\n      \r\n       \r\n        "
+module.exports = "<h2> 이번 주 맛집 랭킹 BEST5 </h2>\r\n<div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" style=\"width: 80% \" aria-valuenow=\"80\" aria-valuemin=\"0\" aria-valuemax=\"100\">BHC</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-success\" role=\"progressbar\" style=\"width: 60%\" aria-valuenow=\"60\" aria-valuemin=\"0\" aria-valuemax=\"100\">KFC</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-info\" role=\"progressbar\" style=\"width: 55%\" aria-valuenow=\"55\" aria-valuemin=\"0\" aria-valuemax=\"100\">MOM'S TOUCH</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-warning\" role=\"progressbar\" style=\"width: 25%\" aria-valuenow=\"25\" aria-valuemin=\"0\" aria-valuemax=\"100\">LOTTERIA</div>\r\n  </div>\r\n  <div class=\"progress\">\r\n    <div class=\"progress-bar progress-bar-striped bg-danger\" role=\"progressbar\" style=\"width: 10%\" aria-valuenow=\"10\" aria-valuemin=\"0\" aria-valuemax=\"100\">STARBUCKS</div>\r\n  </div>\r\n  <br>\r\n  <h2> 이번 달 등록한 회원 </h2>\r\n  \r\n  <table class=\"table table-striped\">\r\n    <thead>\r\n        <tr>\r\n          <th style=\"text-align: center\">No</th>\r\n          <th style=\"text-align: center\">Name</th>\r\n          <th style=\"text-align: center\">Username</th>\r\n          <th style=\"text-align: center\">등록일</th>\r\n        \r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n       <tr >\r\n          <th style=\"text-align: center\"> \r\n            <span class=\"badge\">1</span></th>\r\n          <th style=\"text-align: center\">혜원</th>\r\n          <th style=\"text-align: center\">워니</th>\r\n          <th style=\"text-align: center\">2018.12.02 10:00am</th>\r\n        </tr>\r\n        <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">2</span></th>\r\n            <th style=\"text-align: center\">세영</th>\r\n            <th style=\"text-align: center\">셍이</th>\r\n            <th style=\"text-align: center\">2018.12.06 5:30pm</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">3</span></th>\r\n            <th style=\"text-align: center\">경희</th>\r\n            <th style=\"text-align: center\" >갱이</th>\r\n            <th style=\"text-align: center\">2018.12.13 7:26am</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">4</span></th>\r\n            <th style=\"text-align: center\">민정</th>\r\n            <th style=\"text-align: center\">정이</th>\r\n            <th style=\"text-align: center\">2018.12.18 3:55pm</th>\r\n          </tr>\r\n          <tr >\r\n            <th style=\"text-align: center\"> \r\n              <span class=\"badge\">5</span></th>\r\n            <th style=\"text-align: center\">은솔</th>\r\n            <th style=\"text-align: center\">솔이</th>\r\n            <th style=\"text-align: center\">2018.12.18 8:24pm</th>\r\n          </tr>\r\n\r\n      </tbody>\r\n  </table>\r\n   \r\n      \r\n      \r\n       \r\n        "
 
 /***/ }),
 
@@ -452,7 +452,7 @@ module.exports = "div{background:#ede9f5;\r\n    text-align: center;}\r\n    a{\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"container\">\r\n    \r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n   \r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n   \r\n    <div class=\"carousel-inner\">\r\n\r\n      <div class=\"item active\">\r\n        <img src=\"http://img.etoday.co.kr/pto_db/2012/08/20120808074429_216169_500_364.jpg\"style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px; >\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img src=\"https://pds.joins.com/news/component/htmlphoto_mmdata/201701/16/htm_2017011613284392799.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n      </div>\r\n    \r\n      <div class=\"item\">\r\n        <img src=\"https://www.myhawaii.kr/wp-content/uploads/2015/04/2dc1a9dcdd7996157df35053c53f5b12.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n\r\n      </div>\r\n  \r\n    </div>\r\n\r\n   \r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n<br>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h3>COMPANY INFO</h3>\r\n          <h4>company:(주)quiclick</h4>\r\n          <h4>Email:BSJ@hansung.ac.kr</h4>\r\n          <h4>Address:서울특별시 성북구 삼선교로 16길 116</h4>\r\n          <h4>TEL:02-1234-5678</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h3>QUICLICK</h3>\r\n          <h4>We offer you the best restaurant reservation service :)</h4>\r\n          <h4>We will always strive for better service.</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h3>App</h3>\r\n          <h4>Quiclick App</h4><img width=\"30\" src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\">\r\n        </div>\r\n      </div>\r\n</div>"
+module.exports = "\r\n<div class=\"container\">\r\n    \r\n  <div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\r\n   \r\n    <ol class=\"carousel-indicators\">\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\r\n      <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\r\n    </ol>\r\n\r\n   \r\n    <div class=\"carousel-inner\">\r\n\r\n      <div class=\"item active\">\r\n        <img src=\"http://img.etoday.co.kr/pto_db/2012/08/20120808074429_216169_500_364.jpg\"style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px; >\r\n      </div>\r\n\r\n      <div class=\"item\">\r\n        <img src=\"https://pds.joins.com/news/component/htmlphoto_mmdata/201701/16/htm_2017011613284392799.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n      </div>\r\n    \r\n      <div class=\"item\">\r\n        <img src=\"https://www.myhawaii.kr/wp-content/uploads/2015/04/2dc1a9dcdd7996157df35053c53f5b12.jpg\" style=\"margin-left: auto; margin-right: auto;\" width=600px height=600px;>\r\n\r\n      </div>\r\n  \r\n    </div>\r\n\r\n   \r\n    <a class=\"left carousel-control\" href=\"#myCarousel\" data-slide=\"prev\">\r\n      <span class=\"glyphicon glyphicon-chevron-left\"></span>\r\n      <span class=\"sr-only\">Previous</span>\r\n    </a>\r\n    <a class=\"right carousel-control\" href=\"#myCarousel\" data-slide=\"next\">\r\n      <span class=\"glyphicon glyphicon-chevron-right\"></span>\r\n      <span class=\"sr-only\">Next</span>\r\n    </a>\r\n  </div>\r\n<br>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4\">\r\n          <h3>COMPANY INFO</h3>\r\n          <h4>company:(주)quiclick</h4>\r\n          <h4>Email:BSJ@hansung.ac.kr</h4>\r\n          <h4>Address:서울특별시 성북구 삼선교로 16길 116</h4>\r\n          <h4>TEL:02-1234-5678</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h3>QUICLICK</h3>\r\n          <h4>We offer you the best restaurant reservation service :)</h4>\r\n          <h4>We will always strive for better service.</h4>\r\n        </div>\r\n        <div class=\"col-md-4\">\r\n          <h3>App</h3>\r\n          <h4>Quiclick App</h4> <span class=\"glyphicon glyphicon-heart\"></span>\r\n        </div>\r\n      </div>\r\n</div>"
 
 /***/ }),
 
@@ -515,7 +515,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b>Login</b></h2>\n<form (submit)=\"onLoginSubmit()\">\n  <div class=\"form-group\">\n   \n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b>Login</b></h2>\r\n<form (submit)=\"onLoginSubmit()\">\r\n  <div class=\"form-group\">\r\n   \r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]='username' name=\"username\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"password\" class=\"form-control\" [(ngModel)]='password' name=\"password\" placeholder=\"Password\">\r\n  </div>\r\n  <input type=\"submit\" class=\"btn btn-secondary\" value=\"Login\">\r\n</form>\r\n</div>"
 
 /***/ }),
 
@@ -623,7 +623,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div{background: #e2dcdd; }\r\nli{\r\n    font-family: 'Courier New', Courier, cursive;\r\n    font-size: 20px;\r\n}"
+module.exports = "div{background: #ede9f5; }\r\nli{\r\n    font-family: 'Courier New', Courier, cursive;\r\n    font-size: 20px;\r\n}"
 
 /***/ }),
 
@@ -634,7 +634,7 @@ module.exports = "div{background: #e2dcdd; }\r\nli{\r\n    font-family: 'Courier
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK<img src=\"https://cdn.pixabay.com/photo/2016/03/31/23/57/cursor-1297941_1280.png\" style=\"width:30px\"></a>\r\n          </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()&& !authService.loggedUser()\" class=\"nav-item dropdown\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/review']\">Review</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/addstore']\">Addstore</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/storelist']\">Storelist</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/profile']\">Userlist</li>\r\n            </ul>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n            <a class=\"nav-link\" [routerLink]=\"['/usermain']\"> <span class=\"glyphicon glyphicon-user\"></span> User</a>\r\n        </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser() \" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n          \r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-light bg-default\">\r\n    \r\n    <button class=\"navbar-toggler \" type=\"button\"data-toggle=\"collapse\" data-target=\"#navbarsExample04\" aria-controls=\"navbarsExample04\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n        <span class=\"navbar-toggler-icon caret\"></span>\r\n      </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarsExample04\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n          <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/']\">QUICLICK <span class=\"glyphicon glyphicon-hand-up\"></span></a>\r\n          </li>\r\n        <!-- <li class=\"nav-item active\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:true}\" >\r\n          <a class=\"nav-link\" [routerLink]=\"['/']\" >Home</a>\r\n        </li> -->\r\n      </ul>\r\n      <ul class=\"navbar-nav navbar-right\" >\r\n          <li *ngIf=\"authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/adminmain']\"><span class=\"glyphicon glyphicon-home\"></span> About</a>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedIn()&& !authService.loggedUser()\" class=\"nav-item dropdown\"[routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"glyphicon glyphicon-cog\"></span> Management</a>\r\n            <ul class=\"dropdown-menu\">\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/review']\">Review</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/addstore']\">Addstore</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/storelist']\">Storelist</li>\r\n              <li class=\"dropdown-item\" [routerLink]=\"['/profile']\">Userlist</li>\r\n            </ul>\r\n          </li>\r\n          <li *ngIf=\"authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n            <a class=\"nav-link\" [routerLink]=\"['/usermain']\"> <span class=\"glyphicon glyphicon-user\"></span> User</a>\r\n        </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser() \" class=\"nav-item\" [routerLinkActive]=\"['active']\">\r\n              <a class=\"nav-link\"  [routerLink]=\"['/register']\"><span class=\"glyphicon glyphicon-user\"></span> Sign Up</a>\r\n            </li>\r\n            <li *ngIf=\"!authService.loggedIn() && !authService.loggedUser()\" class=\"nav-item\" [routerLinkActive]=\"['active']\" >\r\n              <a class=\"nav-link\" [routerLink]=\"['/login']\"><span class=\"glyphicon glyphicon-log-in\"></span> Login</a>\r\n            </li>\r\n          \r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\"><span class=\"glyphicon glyphicon-log-out\"></span> Logout</a>\r\n            </li>\r\n      </ul>\r\n    </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -812,7 +812,7 @@ module.exports = "h2{\r\n    color:rgb(115, 133, 153);\r\n    font-family: 'Cour
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\n<h2 class=\"page-header\"><b> Register </b></h2>\n<form (submit)=\"onRegisterSubmit()\">\n    \n  <div class=\"form-group\" >\n  \n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\n  </div>\n  <div class=\"form-group\">\n    \n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\n  </div>\n  <div class=\"form-group\">\n    \n\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\n  </div>\n    <input type=\"submit\" class=\"btn btn-secondary\" value=\"Submit\">\n    \n</form>\n</div>"
+module.exports = "<div class=\"jumbotron text-center\" style=\" margin:0 auto; width:500px; height:300px; vertical-align:middle\">\r\n<h2 class=\"page-header\"><b> Register </b></h2>\r\n<form (submit)=\"onRegisterSubmit()\">\r\n    \r\n  <div class=\"form-group\" >\r\n  \r\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" placeholder=\"ID\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\"  class=\"form-control\" placeholder=\"Username\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n    \r\n\r\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\" placeholder=\"Password\">\r\n  </div>\r\n    <input type=\"submit\" class=\"btn btn-secondary\" value=\"Submit\">\r\n    \r\n</form>\r\n</div>"
 
 /***/ }),
 
@@ -1104,7 +1104,7 @@ var StorelistComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".myImage {\r\n    text-align: center;\r\n    float: left;\r\n    height: 300px;\r\n    width: 335px;\r\n    font-family: Veranda;\r\n    margin-right: 20px;\r\n    margin-left: 100px;\r\n    margin-top: 60px;\r\n    clear: both;\r\n  }\r\n  .heading {\r\n    \r\n  }\r\n  h1{\r\n      -webkit-text-emphasis-color: #a540a0;\r\n              text-emphasis-color: #a540a0\r\n  }"
 
 /***/ }),
 
@@ -1115,7 +1115,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>나의 정보</h2>\r\n"
+module.exports = "<div class=\"heading\">\r\n\r\n<img src = \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBa4NEMfug7H33-BiC6SXULqxCtVxupGN0E2WTzvQnYsPbxgIH\" class=\"myImage\">\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<h1>Welcome to QUCLICK</h1>\r\n<h3>회원님만의 특별한 예약시스템! QUCLICK</h3>\r\n<br>\r\n<br>\r\n<h3>저희 QUCLICK은 선별된 맛집들을 추천하여 예약 서비스를 제공합니다!</h3>\r\n<h3>각 맛집별 리뷰를 비교해 최고의 맛집을 보다 빠르게 예약 가능합니다. </h3>\r\n<br>\r\n<h3>현재, 웹서비스는 관리자용 서비스로 앱에서 이용가능합니다.</h3>\r\n<h3>지금 바로 <a href=\"https://play.google.com/\">Google Playstore</a>에서 \"QUCLICK\" 검색하세요!</h3>\r\n</div>"
 
 /***/ }),
 
@@ -1247,72 +1247,72 @@ var AuthService = /** @class */ (function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/newus/removeuser', users, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/newus/removeuser', users, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteReview = function (reviews) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/reviews/removereview', reviews, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/reviews/removereview', reviews, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.deleteStore = function (stores) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/stores/removestore', stores, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/stores/removestore', stores, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getStore = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/stores/storelist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/stores/storelist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getReview = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/reviews/reviewlist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.registerNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/newus/register', newu, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/newus/register', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.addStore = function (store) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/stores/addstore', store, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/stores/addstore', store, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.addReview = function (review) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/reviews/addreview', review, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/reviews/addreview', review, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/users/authenticate', user, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.authenticateNewu = function (newu) {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/newus/authenticate', newu, { headers: headers })
+        return this.http.post('http://13.209.244.98:3000/newus/authenticate', newu, { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.getProfile = function () {
         var headers = new _angular_http__WEBPACK_IMPORTED_MODULE_1__["Headers"]();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/newus/userlist', { headers: headers })
+        return this.http.get('http://13.209.244.98:3000/newus/userlist', { headers: headers })
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (res) { return res.json(); }));
     };
     AuthService.prototype.storeNewuData = function (token, newu) {
@@ -1475,7 +1475,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\배혜원\MeanAuthApp-master\angular-src\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\SY\DatabaseExample\Quiclick\angular-src\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -18,73 +18,73 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/newus/removeuser',users, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/newus/removeuser',users, {headers: headers})
       .pipe(map(res => res.json()));
   } 
   deleteReview(reviews){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/reviews/removereview', reviews,{headers: headers})
+    return this.http.post('http://13.209.244.98:3000/reviews/removereview', reviews,{headers: headers})
       .pipe(map(res => res.json()));
   }
   deleteStore(stores){
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/stores/removestore',stores,{headers: headers})
+    return this.http.post('http://13.209.244.98:3000/stores/removestore',stores,{headers: headers})
       .pipe(map(res => res.json()));
   }
   getStore() {   /////////////////////요부분
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/stores/storelist', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/stores/storelist', {headers: headers})
       .pipe(map(res => res.json()));
   }
   getReview() {   /////////////////////요부분
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/reviews/reviewlist', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/reviews/reviewlist', {headers: headers})
       .pipe(map(res => res.json()));
   }
 
   registerNewu(newu) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/newus/register', newu, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/newus/register', newu, {headers: headers})
       .pipe(map(res => res.json()));
   }
   addStore(store) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/stores/addstore', store, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/stores/addstore', store, {headers: headers})
       .pipe(map(res => res.json()));
   }
   addReview(review) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/reviews/addreview', review, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/reviews/addreview', review, {headers: headers})
       .pipe(map(res => res.json()));
   }
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/users/authenticate', user, {headers: headers})
       .pipe(map(res => res.json()));
   }
 authenticateNewu(newu) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/newus/authenticate', newu, {headers: headers})
+    return this.http.post('http://13.209.244.98:3000/newus/authenticate', newu, {headers: headers})
       .pipe(map(res => res.json()));
   }
   getProfile() {  
     let headers = new Headers();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this.http.get('http://localhost:3000/newus/userlist', {headers: headers})
+    return this.http.get('http://13.209.244.98:3000/newus/userlist', {headers: headers})
       .pipe(map(res => res.json()));
   }
 
