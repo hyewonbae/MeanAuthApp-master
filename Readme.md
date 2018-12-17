@@ -8,11 +8,14 @@ PS C:\Users\배혜원\Quiclick> ng --version
 ```
 2.해당 angula-src로 이동
  ```
-PS C:\Users\배혜원\MeanAuthApp-master>cd.\angular-src\
+PS C:\Users\배혜원\Quiclick>cd.\angular-src\
 ```
- 3.Build: 배포를 하고 싶다면 빌드를 해줘야 함.
+3.기존에 미리 등록한 관리자용 로그인 정보
+Username: admin
+Password: 1
+4.Build: 배포를 하고 싶다면 빌드를 해줘야 함.
 ```
-PS C:\Users\배혜원\MeanAuthApp-master>ng build
+PS C:\Users\배혜원\Quiclick>ng build
 ```
 
 # putty 서버 실행 
